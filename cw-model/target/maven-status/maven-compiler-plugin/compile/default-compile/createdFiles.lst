@@ -5,6 +5,7 @@ uk\ac\bris\cs\scotlandyard\ui\model\TicketProperty.class
 uk\ac\bris\cs\scotlandyard\ui\controller\LocalGameController$TestRecordingModelFactory.class
 uk\ac\bris\cs\scotlandyard\ui\controller\LocalGameController$TestRecordingModelFactory$1.class
 uk\ac\bris\cs\scotlandyard\model\MyModelFactory.class
+uk\ac\bris\cs\scotlandyard\model\MyGameStateFactory$MyGameState$MyTicketBoard.class
 uk\ac\bris\cs\fxkit\Controller$Default.class
 uk\ac\bris\cs\scotlandyard\ui\controller\FindNodeController.class
 uk\ac\bris\cs\scotlandyard\ui\controller\MoveHintController.class
