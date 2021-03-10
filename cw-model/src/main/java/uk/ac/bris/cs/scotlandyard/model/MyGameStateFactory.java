@@ -17,6 +17,58 @@ import java.util.*;
  */
 public final class MyGameStateFactory implements Factory<GameState> {
 
+	private static boolean verifyDetectives(List<Player> detectives){
+		Set<Integer> locs = new HashSet<>();
+		Set<String> cols = new HashSet<>();
+		for(Player p : detectives){
+			if(!p.piece().isDetective()) return false;
+			if(p.piece().webColour() == "#000") return false;
+			locs.add(p.location());
+			cols.add(p.piece().webColour());
+		}
+		return cols.size() == detectives.size() && locs.size() == detectives.size();
+
+
+	}
+
+	private static ImmutableSet<Move> makeMoves(
+			GameSetup setup,
+			List<Player> detectives,
+			Player player,
+			int source,
+			boolean firstMove) {
+		final var moves = new ArrayList<Move>();
+		for (int destination : setup.graph.adjacentNodes(source)) {
+			boolean occupied = false;
+			for (Player p : detectives) {
+				if (p.location() == destination) {
+					occupied = true;
+					break;
+				}
+			}
+			if (!occupied) {
+				for (ScotlandYard.Transport t : setup.graph.edgeValueOrDefault(source, destination, ImmutableSet.of())) {
+					if(player.hasAtLeast(t.requiredTicket(), 1)){
+						moves.add(new Move.SingleMove(player.piece(), source, t.requiredTicket(), destination));
+						if(firstMove && player.hasAtLeast(ScotlandYard.Ticket.DOUBLE, 1)){
+							ImmutableSet<Move> subsequentMoves = makeMoves(setup, detectives, player.use(t.requiredTicket()), destination, false);
+							for(Move m : subsequentMoves){
+								moves.add(new Move.DoubleMove(
+										player.piece(), source, t.requiredTicket(), destination, m.tickets().iterator().next(), ((Move.SingleMove)m).destination));
+							}
+						}
+					}
+
+				}
+				// TODO consider the rules of secret moves here
+				//  add moves to the destination via a secret ticket if there are any left with the player
+				if(player.hasAtLeast(ScotlandYard.Ticket.SECRET, 1))  moves.add(
+						new Move.SingleMove(player.piece(), source, ScotlandYard.Ticket.SECRET, destination));
+			}
+		}
+		return ImmutableSet.copyOf(moves);
+	}
+
 	private final class MyGameState implements GameState {
 
 		private final class MyTicketBoard implements TicketBoard{
@@ -39,7 +91,6 @@ public final class MyGameStateFactory implements Factory<GameState> {
 		private Player mrX;
 		private List<Player> detectives;
 		private ImmutableList<Player> everyone;
-		private ImmutableSet<Move> moves;
 		private ImmutableSet<Piece> winner;
 
 		@Override public GameSetup getSetup() {  return this.setup; }
@@ -61,22 +112,17 @@ public final class MyGameStateFactory implements Factory<GameState> {
 
 		@Override public ImmutableList<LogEntry> getMrXTravelLog() { return this.log; }
 		@Override public ImmutableSet<Piece> getWinner() { return this.winner; }
-		@Override public ImmutableSet<Move> getAvailableMoves() { return this.moves; }
-		@Override public GameState advance(Move move) {  return null;  }
 
-		private boolean verifyDetectives(List<Player> detectives){
-			Set<Integer> locs = new HashSet<>();
-			Set<String> cols = new HashSet<>();
-			for(Player p : detectives){
-				if(!p.piece().isDetective()) return false;
-				if(p.piece().webColour() == "#000") return false;
-				locs.add(p.location());
-				cols.add(p.piece().webColour());
+		@Override public ImmutableSet<Move> getAvailableMoves() {
+			final var moves = new ArrayList<Move>();
+			for(Player p: detectives){
+				moves.addAll(makeMoves(this.setup, this.detectives, p, p.location(), false));
 			}
-			return cols.size() == detectives.size() && locs.size() == detectives.size();
-
-
+			moves.addAll(makeMoves(this.setup, this.detectives, this.mrX, this.mrX.location(), true));
+			return ImmutableSet.copyOf(moves);
 		}
+
+		@Override public GameState advance(Move move) {  return null;  }
 
 		private MyGameState(
 				final GameSetup setup,
