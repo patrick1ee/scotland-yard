@@ -7,7 +7,16 @@
     <list default="true" id="04ec6009-0c56-4883-89fa-704ce7453d31" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/uk/ac/bris/cs/scotlandyard/model/MyGameStateFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/ac/bris/cs/scotlandyard/model/MyGameStateFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/uk/ac/bris/cs/scotlandyard/model/AllTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uk/ac/bris/cs/scotlandyard/model/AllTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/uk/ac/bris/cs/scotlandyard/model/MyGameStateFactory$MyGameState.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uk/ac/bris/cs/scotlandyard/model/MyGameStateFactory$MyGameState.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/uk/ac/bris/cs/scotlandyard/model/MyGameStateFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uk/ac/bris/cs/scotlandyard/model/MyGameStateFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-uk.ac.bris.cs.scotlandyard.model.AllTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-uk.ac.bris.cs.scotlandyard.model.AllTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-uk.ac.bris.cs.scotlandyard.model.GameStateCreationTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/uk.ac.bris.cs.scotlandyard.model.AllTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/uk.ac.bris.cs.scotlandyard.model.AllTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/uk.ac.bris.cs.scotlandyard.model.GameStateCreationTest.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +34,12 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/uk/ac/bris/cs/scotlandyard/model/MyGameStateFactory.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
   <component name="ProjectId" id="1pZ5kbGEQxKFn083c9feMrAdeqS" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -37,7 +52,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.AllTest">
     <configuration name="AllTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cw-model" />
       <extension name="coverage">
@@ -53,9 +68,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GameStateCreationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cw-model" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="uk.ac.bris.cs.scotlandyard.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="uk.ac.bris.cs.scotlandyard.model" />
+      <option name="MAIN_CLASS_NAME" value="uk.ac.bris.cs.scotlandyard.model.GameStateCreationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ModelObserverTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cw-model" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="uk.ac.bris.cs.scotlandyard.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="uk.ac.bris.cs.scotlandyard.model" />
+      <option name="MAIN_CLASS_NAME" value="uk.ac.bris.cs.scotlandyard.model.ModelObserverTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.AllTest" />
+        <item itemvalue="JUnit.GameStateCreationTest" />
+        <item itemvalue="JUnit.ModelObserverTest" />
       </list>
     </recent_temporary>
   </component>

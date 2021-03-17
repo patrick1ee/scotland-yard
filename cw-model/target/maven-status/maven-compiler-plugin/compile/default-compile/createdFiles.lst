@@ -65,6 +65,7 @@ uk\ac\bris\cs\scotlandyard\model\Move$Visitor.class
 uk\ac\bris\cs\scotlandyard\model\Board$TicketBoard.class
 uk\ac\bris\cs\scotlandyard\ui\controller\BaseGameController.class
 uk\ac\bris\cs\scotlandyard\ui\controller\TicketBoardController$TicketView.class
+uk\ac\bris\cs\scotlandyard\model\MyGameStateFactory$1.class
 uk\ac\bris\cs\scotlandyard\model\Move$DoubleMove.class
 uk\ac\bris\cs\fxkit\interpolator\DecelerateInterpolator.class
 uk\ac\bris\cs\scotlandyard\ui\controller\NotificationController$NotificationBuilder$Notification.class

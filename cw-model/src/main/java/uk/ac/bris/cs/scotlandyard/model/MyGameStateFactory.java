@@ -23,9 +23,9 @@ public final class MyGameStateFactory implements Factory<GameState> {
 		List<Integer> locs = new ArrayList<Integer>();
 		List<Piece> pcs = new ArrayList<Piece>();
 		for(Player p : detectives){
-			if(!p.piece().isDetective()){
-				return false;
-			}
+			if(!p.piece().isDetective()) return false;
+			if(p.has(ScotlandYard.Ticket.DOUBLE)) return false;
+			if(p.has(ScotlandYard.Ticket.SECRET)) return false;
 			if(locs.contains(p.location())) return false;
 			if(pcs.contains(p.piece())) return false;
 			locs.add(p.location());
@@ -91,7 +91,7 @@ public final class MyGameStateFactory implements Factory<GameState> {
 
 	private final class MyGameState implements GameState {
 
-		private final class MyTicketBoard implements TicketBoard{
+		private final class MyTicketBoard implements TicketBoard {
 
 			private final ImmutableMap<ScotlandYard.Ticket, Integer> tickets;
 
@@ -100,7 +100,7 @@ public final class MyGameStateFactory implements Factory<GameState> {
 				return this.tickets.getOrDefault(ticket, 0);
 			}
 
-			private MyTicketBoard(ImmutableMap<ScotlandYard.Ticket, Integer> tickets){
+			private MyTicketBoard(ImmutableMap<ScotlandYard.Ticket, Integer> tickets) {
 				this.tickets = tickets;
 			}
 		}
@@ -110,40 +110,60 @@ public final class MyGameStateFactory implements Factory<GameState> {
 		private ImmutableList<LogEntry> log;
 		private Player mrX;
 		private List<Player> detectives;
-		private ImmutableList<Player> everyone;
 		private ImmutableSet<Piece> winner;
 
-		@Override public GameSetup getSetup() {  return this.setup; }
-		@Override public ImmutableSet<Piece> getPlayers() { return this.remaining; }
 
-		@Override public Optional<Integer> getDetectiveLocation(Piece.Detective detective) {
-			for (Player p : this.detectives){
-				if(p.piece() == detective) return Optional.of(p.location());
+		@Override
+		public GameSetup getSetup() {
+			return this.setup;
+		}
+
+		@Override
+		public ImmutableSet<Piece> getPlayers() {
+			return this.remaining;
+		}
+
+		@Override
+		public Optional<Integer> getDetectiveLocation(Piece.Detective detective) {
+			for (Player p : this.detectives) {
+				if (p.piece() == detective) return Optional.of(p.location());
 			}
 			return Optional.empty();
 		}
 
-		@Override public Optional<TicketBoard> getPlayerTickets(Piece piece) {
-			for (Player p : this.everyone){
-				if(p.piece() == piece) return Optional.of(new MyTicketBoard(p.tickets()));
+		@Override
+		public Optional<TicketBoard> getPlayerTickets(Piece piece) {
+			if(piece.isMrX()) return Optional.of(new MyTicketBoard(mrX.tickets()));
+			for (Player p : this.detectives) {
+				if (p.piece() == piece) return Optional.of(new MyTicketBoard(p.tickets()));
 			}
 			return Optional.empty();
 		}
 
-		@Override public ImmutableList<LogEntry> getMrXTravelLog() { return this.log; }
-		@Override public ImmutableSet<Piece> getWinner() { return this.winner; }
+		@Override
+		public ImmutableList<LogEntry> getMrXTravelLog() {
+			return this.log;
+		}
 
-		@Override public ImmutableSet<Move> getAvailableMoves() {
+		@Override
+		public ImmutableSet<Piece> getWinner() {
+			return this.winner;
+		}
+
+		@Override
+		public ImmutableSet<Move> getAvailableMoves() {
 			final var moves = new ArrayList<Move>();
-			for(Player p: detectives){
+			for (Player p : detectives) {
 				moves.addAll(makeMoves(this.setup, this.detectives, p, p.location(), false));
 			}
 			moves.addAll(makeMoves(this.setup, this.detectives, this.mrX, this.mrX.location(), true));
 			return ImmutableSet.copyOf(moves);
 		}
 
-		@Override public GameState advance(Move move) {
-			if(this.getAvailableMoves().contains(move)) throw new IllegalArgumentException("Illegal move: "+move);
+		@Nonnull
+		@Override
+		public GameState advance(Move move) {
+			if(!this.getAvailableMoves().contains(move)) throw new IllegalArgumentException("Illegal move: "+move);
 
 			Player mrXNew = null;
 			ImmutableList<LogEntry> logNew = ImmutableList.copyOf(log);
@@ -175,37 +195,37 @@ public final class MyGameStateFactory implements Factory<GameState> {
 				final ImmutableSet<Piece> remaining,
 				final ImmutableList<LogEntry> log,
 				final Player mrX,
-				final List<Player> detectives){
+				final List<Player> detectives) {
 
 			this.setup = Objects.requireNonNull(setup, "setup must not be null");
 			this.remaining = Objects.requireNonNull(remaining, "remaining must not be null");
 			this.log = Objects.requireNonNull(log, "log must not be null");
 			this.mrX = Objects.requireNonNull(mrX, "mrX must not be null");
 			this.detectives = Objects.requireNonNull(detectives, "detectives must not be null");
+			this.winner = ImmutableSet.of();
 
-			if(this.setup.rounds.isEmpty()) throw new IllegalArgumentException("Rounds is empty");
-			if(!verifyDetectives(this.detectives)) throw new IllegalArgumentException("Invalid detectives");
-			if(this.mrX.piece().webColour() != "#000") throw new IllegalArgumentException("MrX is not the black piece");
+			if (this.setup.rounds.isEmpty()) throw new IllegalArgumentException("Rounds is empty");
+			if(this.setup.graph.nodes().isEmpty()) throw new IllegalArgumentException("Graph is empty");
+			if (!verifyDetectives(this.detectives)) throw new IllegalArgumentException("Invalid detectives");
+			if (this.mrX.piece().webColour() != "#000")
+				throw new IllegalArgumentException("MrX is not the black piece");
 
-			boolean detectivesWin = false;
-			List<Piece> detectivePieces = new ArrayList<Piece>();
-			for(Player p : detectives){
-				detectivePieces.add(p.piece());
-				if(p.location() == mrX.location()){
-					detectivesWin = true;
-				}
-			}
-			if(detectivesWin) winner.addAll(detectivePieces);
-			else if(log.size()== 24) winner.add(mrX.piece());
 		}
 	}
 
-	@Nonnull @Override public GameState build(
+
+	@Nonnull
+	@Override
+	public GameState build(
 			GameSetup setup,
 			Player mrX,
 			ImmutableList<Player> detectives) {
-		return new MyGameState(setup, ImmutableSet.of(Piece.MrX.MRX), ImmutableList.of(), mrX, detectives);
+		Set s = new HashSet<Piece>();
+		s.add(mrX.piece());
+		for(Player p : detectives){
+			s.add(p.piece());
+		}
+			return new MyGameState(setup, ImmutableSet.copyOf(s), ImmutableList.of(), mrX, detectives);
 
 	}
-
 }

@@ -1,170 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: uk.ac.bris.cs.scotlandyard.model.AllTest
 -------------------------------------------------------------------------------
-Tests run: 83, Failures: 3, Errors: 71, Skipped: 0, Time elapsed: 0.484 s <<< FAILURE! - in uk.ac.bris.cs.scotlandyard.model.AllTest
-testGetGraphMatchesSupplied[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@29176cc1](uk.ac.bris.cs.scotlandyard.model.GameStateCreationTest)  Time elapsed: 0.005 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStateCreationTest.testGetGraphMatchesSupplied(GameStateCreationTest.java:150)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runners.Suite.runChild(Suite.java:128)
-	at org.junit.runners.Suite.runChild(Suite.java:27)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runners.Suite.runChild(Suite.java:128)
-	at org.junit.runners.Suite.runChild(Suite.java:27)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:383)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:344)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
-
-testWinningPlayerIsEmptyInitially[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@29176cc1](uk.ac.bris.cs.scotlandyard.model.GameStateCreationTest)  Time elapsed: 0.001 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStateCreationTest.testWinningPlayerIsEmptyInitially(GameStateCreationTest.java:167)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runners.Suite.runChild(Suite.java:128)
-	at org.junit.runners.Suite.runChild(Suite.java:27)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runners.Suite.runChild(Suite.java:128)
-	at org.junit.runners.Suite.runChild(Suite.java:27)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:383)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:344)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
-
-testTwoPlayerWorks[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@29176cc1](uk.ac.bris.cs.scotlandyard.model.GameStateCreationTest)  Time elapsed: 0.002 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStateCreationTest.testTwoPlayerWorks(GameStateCreationTest.java:126)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runners.Suite.runChild(Suite.java:128)
-	at org.junit.runners.Suite.runChild(Suite.java:27)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runners.Suite.runChild(Suite.java:128)
-	at org.junit.runners.Suite.runChild(Suite.java:27)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:383)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:344)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
-
-testLocationOverlapBetweenDetectivesShouldThrow[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@29176cc1](uk.ac.bris.cs.scotlandyard.model.GameStateCreationTest)  Time elapsed: 0.001 s  <<< FAILURE!
+Tests run: 83, Failures: 20, Errors: 48, Skipped: 0, Time elapsed: 0.591 s <<< FAILURE! - in uk.ac.bris.cs.scotlandyard.model.AllTest
+testDetectiveHaveDoubleTicketShouldThrow[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@7219ec67](uk.ac.bris.cs.scotlandyard.model.GameStateCreationTest)  Time elapsed: 0.004 s  <<< FAILURE!
 java.lang.AssertionError: Expected exception: java.lang.IllegalArgumentException
 	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:34)
 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
@@ -206,13 +44,11 @@ java.lang.AssertionError: Expected exception: java.lang.IllegalArgumentException
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testGetPlayerTicketsMatchesSupplied[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@29176cc1](uk.ac.bris.cs.scotlandyard.model.GameStateCreationTest)  Time elapsed: 0 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStateCreationTest.testGetPlayerTicketsMatchesSupplied(GameStateCreationTest.java:207)
+testWinningPlayerIsEmptyInitially[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@7219ec67](uk.ac.bris.cs.scotlandyard.model.GameStateCreationTest)  Time elapsed: 0.009 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting actual not to be null
+	at uk.ac.bris.cs.scotlandyard.model.GameStateCreationTest.testWinningPlayerIsEmptyInitially(GameStateCreationTest.java:174)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -260,277 +96,7 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testGetPlayersMatchesSupplied[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@29176cc1](uk.ac.bris.cs.scotlandyard.model.GameStateCreationTest)  Time elapsed: 0.002 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStateCreationTest.testGetPlayersMatchesSupplied(GameStateCreationTest.java:158)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runners.Suite.runChild(Suite.java:128)
-	at org.junit.runners.Suite.runChild(Suite.java:27)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runners.Suite.runChild(Suite.java:128)
-	at org.junit.runners.Suite.runChild(Suite.java:27)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:383)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:344)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
-
-testGetPlayerTicketsForNonExistentPlayerIsEmpty[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@29176cc1](uk.ac.bris.cs.scotlandyard.model.GameStateCreationTest)  Time elapsed: 0.001 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStateCreationTest.testGetPlayerTicketsForNonExistentPlayerIsEmpty(GameStateCreationTest.java:215)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runners.Suite.runChild(Suite.java:128)
-	at org.junit.runners.Suite.runChild(Suite.java:27)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runners.Suite.runChild(Suite.java:128)
-	at org.junit.runners.Suite.runChild(Suite.java:27)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:383)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:344)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
-
-testGetRoundsMatchesSupplied[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@29176cc1](uk.ac.bris.cs.scotlandyard.model.GameStateCreationTest)  Time elapsed: 0.001 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStateCreationTest.testGetRoundsMatchesSupplied(GameStateCreationTest.java:142)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runners.Suite.runChild(Suite.java:128)
-	at org.junit.runners.Suite.runChild(Suite.java:27)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runners.Suite.runChild(Suite.java:128)
-	at org.junit.runners.Suite.runChild(Suite.java:27)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:383)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:344)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
-
-testGetPlayerLocationForNonExistentPlayerIsEmpty[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@29176cc1](uk.ac.bris.cs.scotlandyard.model.GameStateCreationTest)  Time elapsed: 0.003 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStateCreationTest.testGetPlayerLocationForNonExistentPlayerIsEmpty(GameStateCreationTest.java:193)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runners.Suite.runChild(Suite.java:128)
-	at org.junit.runners.Suite.runChild(Suite.java:27)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runners.Suite.runChild(Suite.java:128)
-	at org.junit.runners.Suite.runChild(Suite.java:27)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:383)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:344)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
-
-testSixPlayerWorks[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@29176cc1](uk.ac.bris.cs.scotlandyard.model.GameStateCreationTest)  Time elapsed: 0 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStateCreationTest.testSixPlayerWorks(GameStateCreationTest.java:132)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runners.Suite.runChild(Suite.java:128)
-	at org.junit.runners.Suite.runChild(Suite.java:27)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runners.Suite.runChild(Suite.java:128)
-	at org.junit.runners.Suite.runChild(Suite.java:27)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:383)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:344)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
-
-testDuplicateDetectivesShouldThrow[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@29176cc1](uk.ac.bris.cs.scotlandyard.model.GameStateCreationTest)  Time elapsed: 0.004 s  <<< FAILURE!
+testEmptyGraphShouldThrow[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@7219ec67](uk.ac.bris.cs.scotlandyard.model.GameStateCreationTest)  Time elapsed: 0.002 s  <<< FAILURE!
 java.lang.AssertionError: Expected exception: java.lang.IllegalArgumentException
 	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:34)
 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
@@ -572,13 +138,13 @@ java.lang.AssertionError: Expected exception: java.lang.IllegalArgumentException
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testGetDetectiveLocationMatchesSupplied[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@29176cc1](uk.ac.bris.cs.scotlandyard.model.GameStateCreationTest)  Time elapsed: 0 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStateCreationTest.testGetDetectiveLocationMatchesSupplied(GameStateCreationTest.java:178)
+testGetPlayerTicketsMatchesSupplied[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@7219ec67](uk.ac.bris.cs.scotlandyard.model.GameStateCreationTest)  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.NullPointerException
+	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.getPlayerTickets(MyGameStateFactory.java:140)
+	at uk.ac.bris.cs.scotlandyard.model.ParameterisedModelTestBase.lambda$assertTicketCount$2(ParameterisedModelTestBase.java:171)
+	at com.google.common.collect.RegularImmutableMap.forEach(RegularImmutableMap.java:185)
+	at uk.ac.bris.cs.scotlandyard.model.ParameterisedModelTestBase.assertTicketCount(ParameterisedModelTestBase.java:170)
+	at uk.ac.bris.cs.scotlandyard.model.GameStateCreationTest.testGetPlayerTicketsMatchesSupplied(GameStateCreationTest.java:208)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -626,7 +192,116 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testMoreThanOneMrXShouldThrow[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@29176cc1](uk.ac.bris.cs.scotlandyard.model.GameStateCreationTest)  Time elapsed: 0 s  <<< FAILURE!
+testGetPlayersMatchesSupplied[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@7219ec67](uk.ac.bris.cs.scotlandyard.model.GameStateCreationTest)  Time elapsed: 0.008 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting:
+  [MRX]
+to contain exactly in any order:
+  [MRX, RED, GREEN, BLUE]
+but could not find the following elements:
+  [RED, GREEN, BLUE]
+
+	at uk.ac.bris.cs.scotlandyard.model.GameStateCreationTest.testGetPlayersMatchesSupplied(GameStateCreationTest.java:163)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:383)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:344)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
+
+testGetPlayerTicketsForNonExistentPlayerIsEmpty[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@7219ec67](uk.ac.bris.cs.scotlandyard.model.GameStateCreationTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.getPlayerTickets(MyGameStateFactory.java:140)
+	at uk.ac.bris.cs.scotlandyard.model.GameStateCreationTest.testGetPlayerTicketsForNonExistentPlayerIsEmpty(GameStateCreationTest.java:220)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:383)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:344)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
+
+testDetectiveHaveSecretTicketShouldThrow[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@7219ec67](uk.ac.bris.cs.scotlandyard.model.GameStateCreationTest)  Time elapsed: 0.001 s  <<< FAILURE!
 java.lang.AssertionError: Expected exception: java.lang.IllegalArgumentException
 	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:34)
 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
@@ -668,13 +343,10 @@ java.lang.AssertionError: Expected exception: java.lang.IllegalArgumentException
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testGameOverIfMrXCaptured[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@69b2283a](uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest)  Time elapsed: 0.001 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest.testGameOverIfMrXCaptured(GameStateGameOverTest.java:107)
+testGameOverIfMrXCaptured[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@5be6e01c](uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest)  Time elapsed: 0.044 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal move: TAXI(MRX@86, 103)
+	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.advance(MyGameStateFactory.java:169)
+	at uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest.testGameOverIfMrXCaptured(GameStateGameOverTest.java:108)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -722,13 +394,12 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testGameOverBeforeAnyRoundWithTerminatingConfiguration[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@69b2283a](uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest)  Time elapsed: 0 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest.testGameOverBeforeAnyRoundWithTerminatingConfiguration(GameStateGameOverTest.java:172)
+testGameOverBeforeAnyRoundWithTerminatingConfiguration[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@5be6e01c](uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest)  Time elapsed: 0.01 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting actual not to be null
+	at uk.ac.bris.cs.scotlandyard.model.ParameterisedModelTestBase.assertGameIsOver(ParameterisedModelTestBase.java:248)
+	at uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest.testGameOverBeforeAnyRoundWithTerminatingConfiguration(GameStateGameOverTest.java:173)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -776,13 +447,10 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testGameOverAfterAllRoundsUsed[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@69b2283a](uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest)  Time elapsed: 0 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest.testGameOverAfterAllRoundsUsed(GameStateGameOverTest.java:49)
+testGameOverAfterAllRoundsUsed[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@5be6e01c](uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal move: TAXI(MRX@86, 103)
+	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.advance(MyGameStateFactory.java:169)
+	at uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest.testGameOverAfterAllRoundsUsed(GameStateGameOverTest.java:52)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -830,13 +498,10 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testWinningPlayerOnlyContainsBlackIfMrXWins[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@69b2283a](uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest)  Time elapsed: 0 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest.testWinningPlayerOnlyContainsBlackIfMrXWins(GameStateGameOverTest.java:188)
+testWinningPlayerOnlyContainsBlackIfMrXWins[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@5be6e01c](uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal move: TAXI(MRX@86, 104)
+	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.advance(MyGameStateFactory.java:169)
+	at uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest.testWinningPlayerOnlyContainsBlackIfMrXWins(GameStateGameOverTest.java:189)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -884,13 +549,10 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testWinningPlayerOnlyContainAllDetectivesIfDetectiveWins[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@69b2283a](uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest)  Time elapsed: 0.001 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest.testWinningPlayerOnlyContainAllDetectivesIfDetectiveWins(GameStateGameOverTest.java:199)
+testWinningPlayerOnlyContainAllDetectivesIfDetectiveWins[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@5be6e01c](uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest)  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal move: TAXI(MRX@86, 103)
+	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.advance(MyGameStateFactory.java:169)
+	at uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest.testWinningPlayerOnlyContainAllDetectivesIfDetectiveWins(GameStateGameOverTest.java:200)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -938,13 +600,11 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testStartRoundShouldThrowIfGameAlreadyOver[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@69b2283a](uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest)  Time elapsed: 0 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest.testStartRoundShouldThrowIfGameAlreadyOver(GameStateGameOverTest.java:27)
+testStartRoundShouldThrowIfGameAlreadyOver[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@5be6e01c](uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting actual not to be null
+	at uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest.testStartRoundShouldThrowIfGameAlreadyOver(GameStateGameOverTest.java:28)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -992,13 +652,10 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testGameOverIfMrXStuck[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@69b2283a](uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest)  Time elapsed: 0 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest.testGameOverIfMrXStuck(GameStateGameOverTest.java:73)
+testGameOverIfMrXStuck[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@5be6e01c](uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal move: TAXI(MRX@86, 104)
+	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.advance(MyGameStateFactory.java:169)
+	at uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest.testGameOverIfMrXStuck(GameStateGameOverTest.java:77)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1046,13 +703,10 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testGameOverIfAllDetectivesStuck[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@69b2283a](uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest)  Time elapsed: 0.001 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest.testGameOverIfAllDetectivesStuck(GameStateGameOverTest.java:62)
+testGameOverIfAllDetectivesStuck[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@5be6e01c](uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest)  Time elapsed: 0.002 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal move: TAXI(MRX@86, 104)
+	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.advance(MyGameStateFactory.java:169)
+	at uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest.testGameOverIfAllDetectivesStuck(GameStateGameOverTest.java:63)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1100,13 +754,10 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testGameNotOverIfMrXCorneredButCanStillEscape[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@69b2283a](uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest)  Time elapsed: 0 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest.testGameNotOverIfMrXCorneredButCanStillEscape(GameStateGameOverTest.java:149)
+testGameNotOverIfMrXCorneredButCanStillEscape[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@5be6e01c](uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest)  Time elapsed: 0.004 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal move: TAXI(MRX@40, 52)
+	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.advance(MyGameStateFactory.java:169)
+	at uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest.testGameNotOverIfMrXCorneredButCanStillEscape(GameStateGameOverTest.java:152)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1154,13 +805,10 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testGameNotOverWhenThereIsStillRoundsLeft[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@69b2283a](uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest)  Time elapsed: 0 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest.testGameNotOverWhenThereIsStillRoundsLeft(GameStateGameOverTest.java:35)
+testGameNotOverWhenThereIsStillRoundsLeft[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@5be6e01c](uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest)  Time elapsed: 0.002 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal move: TAXI(MRX@86, 103)
+	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.advance(MyGameStateFactory.java:169)
+	at uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest.testGameNotOverWhenThereIsStillRoundsLeft(GameStateGameOverTest.java:37)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1208,13 +856,10 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testWinningPlayerIsEmptyBeforeGameOver[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@69b2283a](uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest)  Time elapsed: 0 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest.testWinningPlayerIsEmptyBeforeGameOver(GameStateGameOverTest.java:179)
+testWinningPlayerIsEmptyBeforeGameOver[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@5be6e01c](uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest)  Time elapsed: 0.002 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal move: TAXI(MRX@86, 104)
+	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.advance(MyGameStateFactory.java:169)
+	at uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest.testWinningPlayerIsEmptyBeforeGameOver(GameStateGameOverTest.java:180)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1262,13 +907,12 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testGameNotOverBeforeAnyRoundWithNonTerminatingConfiguration[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@69b2283a](uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest)  Time elapsed: 0.001 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest.testGameNotOverBeforeAnyRoundWithNonTerminatingConfiguration(GameStateGameOverTest.java:164)
+testGameNotOverBeforeAnyRoundWithNonTerminatingConfiguration[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@5be6e01c](uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting actual not to be null
+	at uk.ac.bris.cs.scotlandyard.model.ParameterisedModelTestBase.assertGameIsNotOver(ParameterisedModelTestBase.java:253)
+	at uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest.testGameNotOverBeforeAnyRoundWithNonTerminatingConfiguration(GameStateGameOverTest.java:165)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1316,13 +960,10 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testGameNotOverIfSomeDetectivesAreStuck[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@69b2283a](uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest)  Time elapsed: 0 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest.testGameNotOverIfSomeDetectivesAreStuck(GameStateGameOverTest.java:132)
+testGameNotOverIfSomeDetectivesAreStuck[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@5be6e01c](uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal move: TAXI(MRX@40, 52)
+	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.advance(MyGameStateFactory.java:169)
+	at uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest.testGameNotOverIfSomeDetectivesAreStuck(GameStateGameOverTest.java:134)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1370,13 +1011,10 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testDetectiveWinsIfMrXCornered[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@69b2283a](uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest)  Time elapsed: 0.001 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest.testDetectiveWinsIfMrXCornered(GameStateGameOverTest.java:118)
+testDetectiveWinsIfMrXCornered[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@5be6e01c](uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest)  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal move: TAXI(MRX@103, 85)
+	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.advance(MyGameStateFactory.java:169)
+	at uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest.testDetectiveWinsIfMrXCornered(GameStateGameOverTest.java:120)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1424,13 +1062,10 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testGameNotOverIfMrXWasFreedBeforeNextRotation[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@69b2283a](uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest)  Time elapsed: 0 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest.testGameNotOverIfMrXWasFreedBeforeNextRotation(GameStateGameOverTest.java:91)
+testGameNotOverIfMrXWasFreedBeforeNextRotation[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@5be6e01c](uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal move: TAXI(MRX@86, 104)
+	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.advance(MyGameStateFactory.java:169)
+	at uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest.testGameNotOverIfMrXWasFreedBeforeNextRotation(GameStateGameOverTest.java:95)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1478,13 +1113,10 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testRoundRotationFor2Rounds[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@2473d930](uk.ac.bris.cs.scotlandyard.model.GameStateRoundTest)  Time elapsed: 0.018 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStateRoundTest.testRoundRotationFor2Rounds(GameStateRoundTest.java:88)
+testRoundRotationFor2Rounds[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@5223e5ee](uk.ac.bris.cs.scotlandyard.model.GameStateRoundTest)  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal move: TAXI(MRX@35, 22)
+	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.advance(MyGameStateFactory.java:169)
+	at uk.ac.bris.cs.scotlandyard.model.GameStateRoundTest.testRoundRotationFor2Rounds(GameStateRoundTest.java:89)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1532,13 +1164,10 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testRoundIncrementsCorrectlyForDoubleMove[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@2473d930](uk.ac.bris.cs.scotlandyard.model.GameStateRoundTest)  Time elapsed: 0 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStateRoundTest.testRoundIncrementsCorrectlyForDoubleMove(GameStateRoundTest.java:70)
+testRoundIncrementsCorrectlyForDoubleMove[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@5223e5ee](uk.ac.bris.cs.scotlandyard.model.GameStateRoundTest)  Time elapsed: 0.028 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal move: x2(MRX@45, TAXI, 32, TAXI, 19)
+	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.advance(MyGameStateFactory.java:169)
+	at uk.ac.bris.cs.scotlandyard.model.GameStateRoundTest.testRoundIncrementsCorrectlyForDoubleMove(GameStateRoundTest.java:72)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1586,13 +1215,94 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testCorrectMovePlayersForAllRounds[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@2473d930](uk.ac.bris.cs.scotlandyard.model.GameStateRoundTest)  Time elapsed: 0 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStateRoundTest.testCorrectMovePlayersForAllRounds(GameStateRoundTest.java:44)
+testCorrectMovePlayersForAllRounds[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@5223e5ee](uk.ac.bris.cs.scotlandyard.model.GameStateRoundTest)  Time elapsed: 0.004 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting all elements of:
+  [TAXI(RED@91, 56),
+    TAXI(RED@91, 72),
+    TAXI(RED@91, 105),
+    TAXI(RED@91, 90),
+    TAXI(RED@91, 107),
+    TAXI(GREEN@29, 16),
+    TAXI(GREEN@29, 17),
+    TAXI(GREEN@29, 41),
+    BUS(GREEN@29, 41),
+    TAXI(GREEN@29, 42),
+    BUS(GREEN@29, 42),
+    TAXI(GREEN@29, 6),
+    BUS(GREEN@29, 15),
+    BUS(GREEN@29, 55),
+    BUS(BLUE@94, 74),
+    TAXI(BLUE@94, 75),
+    BUS(BLUE@94, 77),
+    TAXI(BLUE@94, 93),
+    BUS(BLUE@94, 93),
+    TAXI(BLUE@94, 95),
+    TAXI(WHITE@50, 37),
+    TAXI(WHITE@50, 49),
+    TAXI(WHITE@50, 38),
+    TAXI(YELLOW@138, 124),
+    TAXI(YELLOW@138, 152),
+    TAXI(YELLOW@138, 150),
+    TAXI(MRX@106, 105),
+    x2(MRX@106, TAXI, 105, BUS, 72),
+    x2(MRX@106, TAXI, 105, SECRET, 72),
+    x2(MRX@106, TAXI, 105, TAXI, 89),
+    x2(MRX@106, TAXI, 105, BUS, 89),
+    x2(MRX@106, TAXI, 105, SECRET, 89),
+    x2(MRX@106, TAXI, 105, TAXI, 90),
+    x2(MRX@106, TAXI, 105, SECRET, 90),
+    x2(MRX@106, TAXI, 105, TAXI, 106),
+    x2(MRX@106, TAXI, 105, SECRET, 106),
+    x2(MRX@106, TAXI, 105, BUS, 107),
+    x2(MRX@106, TAXI, 105, SECRET, 107),
+    x2(MRX@106, TAXI, 105, TAXI, 108),
+    x2(MRX@106, TAXI, 105, BUS, 108),
+    x2(MRX@106, TAXI, 105, SECRET, 108),
+    x2(MRX@106, TAXI, 105, BUS, 87),
+    x2(MRX@106, TAXI, 105, SECRET, 87),
+    SECRET(MRX@106, 105),
+    TAXI(MRX@106, 107),
+    x2(MRX@106, TAXI, 107, BUS, 72),
+    x2(MRX@106, TAXI, 107, SECRET, 72),
+    x2(MRX@106, TAXI, 107, BUS, 105),
+    x2(MRX@106, TAXI, 107, SECRET, 105),
+    x2(MRX@106, TAXI, 107, BUS, 161),
+    x2(MRX@106, TAXI, 107, SECRET, 161),
+    x2(MRX@106, TAXI, 107, TAXI, 106),
+    x2(MRX@106, TAXI, 107, SECRET, 106),
+    x2(MRX@106, TAXI, 107, TAXI, 119),
+    x2(MRX@106, TAXI, 107, SECRET, 119),
+    SECRET(MRX@106, 107)]
+to match given predicate but these elements did not:
+  [TAXI(RED@91, 56),
+    TAXI(RED@91, 72),
+    TAXI(RED@91, 105),
+    TAXI(RED@91, 90),
+    TAXI(RED@91, 107),
+    TAXI(GREEN@29, 16),
+    TAXI(GREEN@29, 17),
+    TAXI(GREEN@29, 41),
+    BUS(GREEN@29, 41),
+    TAXI(GREEN@29, 42),
+    BUS(GREEN@29, 42),
+    TAXI(GREEN@29, 6),
+    BUS(GREEN@29, 15),
+    BUS(GREEN@29, 55),
+    BUS(BLUE@94, 74),
+    TAXI(BLUE@94, 75),
+    BUS(BLUE@94, 77),
+    TAXI(BLUE@94, 93),
+    BUS(BLUE@94, 93),
+    TAXI(BLUE@94, 95),
+    TAXI(WHITE@50, 37),
+    TAXI(WHITE@50, 49),
+    TAXI(WHITE@50, 38),
+    TAXI(YELLOW@138, 124),
+    TAXI(YELLOW@138, 152),
+    TAXI(YELLOW@138, 150)]
+	at uk.ac.bris.cs.scotlandyard.model.GameStateRoundTest.testCorrectMovePlayersForAllRounds(GameStateRoundTest.java:46)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1640,13 +1350,18 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testIllegalMoveNotInGivenMovesWillThrow[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@2473d930](uk.ac.bris.cs.scotlandyard.model.GameStateRoundTest)  Time elapsed: 0 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStateRoundTest.testIllegalMoveNotInGivenMovesWillThrow(GameStateRoundTest.java:102)
+testIllegalMoveNotInGivenMovesWillThrow[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@5223e5ee](uk.ac.bris.cs.scotlandyard.model.GameStateRoundTest)  Time elapsed: 0.01 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting actual throwable to be an instance of:
+  java.lang.IllegalArgumentException
+but was:
+  java.lang.UnsupportedOperationException
+	at com.google.common.collect.ImmutableCollection.add(ImmutableCollection.java:246)
+	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.advance(MyGameStateFactory.java:178)
+	at uk.ac.bris.cs.scotlandyard.model.GameStateRoundTest.lambda$testIllegalMoveNotInGivenMovesWillThrow$3(GameStateRoundTest.java:106)
+	...(51 remaining lines not displayed - this can be changed with Assertions.setMaxStackTraceElementsDisplayed)
+	at uk.ac.bris.cs.scotlandyard.model.GameStateRoundTest.testIllegalMoveNotInGivenMovesWillThrow(GameStateRoundTest.java:107)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1694,13 +1409,67 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testMrXIsTheFirstToPlay[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@2473d930](uk.ac.bris.cs.scotlandyard.model.GameStateRoundTest)  Time elapsed: 0 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStateRoundTest.testMrXIsTheFirstToPlay(GameStateRoundTest.java:79)
+testMrXIsTheFirstToPlay[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@5223e5ee](uk.ac.bris.cs.scotlandyard.model.GameStateRoundTest)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting all elements of:
+  [TAXI(BLUE@26, 15),
+    TAXI(BLUE@26, 27),
+    TAXI(BLUE@26, 39),
+    TAXI(MRX@35, 36),
+    x2(MRX@35, TAXI, 36, TAXI, 37),
+    x2(MRX@35, TAXI, 36, SECRET, 37),
+    x2(MRX@35, TAXI, 36, TAXI, 49),
+    x2(MRX@35, TAXI, 36, SECRET, 49),
+    x2(MRX@35, TAXI, 36, TAXI, 35),
+    x2(MRX@35, TAXI, 36, SECRET, 35),
+    SECRET(MRX@35, 36),
+    TAXI(MRX@35, 48),
+    x2(MRX@35, TAXI, 48, TAXI, 34),
+    x2(MRX@35, TAXI, 48, SECRET, 34),
+    x2(MRX@35, TAXI, 48, TAXI, 62),
+    x2(MRX@35, TAXI, 48, SECRET, 62),
+    x2(MRX@35, TAXI, 48, TAXI, 35),
+    x2(MRX@35, TAXI, 48, SECRET, 35),
+    x2(MRX@35, TAXI, 48, TAXI, 63),
+    x2(MRX@35, TAXI, 48, SECRET, 63),
+    SECRET(MRX@35, 48),
+    TAXI(MRX@35, 65),
+    x2(MRX@35, TAXI, 65, TAXI, 64),
+    x2(MRX@35, TAXI, 65, SECRET, 64),
+    x2(MRX@35, TAXI, 65, TAXI, 66),
+    x2(MRX@35, TAXI, 65, SECRET, 66),
+    x2(MRX@35, TAXI, 65, TAXI, 82),
+    x2(MRX@35, TAXI, 65, BUS, 82),
+    x2(MRX@35, TAXI, 65, SECRET, 82),
+    x2(MRX@35, TAXI, 65, TAXI, 35),
+    x2(MRX@35, TAXI, 65, SECRET, 35),
+    x2(MRX@35, TAXI, 65, BUS, 67),
+    x2(MRX@35, TAXI, 65, SECRET, 67),
+    x2(MRX@35, TAXI, 65, BUS, 22),
+    x2(MRX@35, TAXI, 65, SECRET, 22),
+    x2(MRX@35, TAXI, 65, BUS, 63),
+    x2(MRX@35, TAXI, 65, SECRET, 63),
+    SECRET(MRX@35, 65),
+    TAXI(MRX@35, 22),
+    x2(MRX@35, TAXI, 22, BUS, 65),
+    x2(MRX@35, TAXI, 22, SECRET, 65),
+    x2(MRX@35, TAXI, 22, TAXI, 34),
+    x2(MRX@35, TAXI, 22, BUS, 34),
+    x2(MRX@35, TAXI, 22, SECRET, 34),
+    x2(MRX@35, TAXI, 22, BUS, 3),
+    x2(MRX@35, TAXI, 22, SECRET, 3),
+    x2(MRX@35, TAXI, 22, TAXI, 11),
+    x2(MRX@35, TAXI, 22, SECRET, 11),
+    x2(MRX@35, TAXI, 22, TAXI, 35),
+    x2(MRX@35, TAXI, 22, SECRET, 35),
+    x2(MRX@35, TAXI, 22, TAXI, 23),
+    x2(MRX@35, TAXI, 22, BUS, 23),
+    x2(MRX@35, TAXI, 22, SECRET, 23),
+    SECRET(MRX@35, 22)]
+to match given predicate but these elements did not:
+  [TAXI(BLUE@26, 15), TAXI(BLUE@26, 27), TAXI(BLUE@26, 39)]
+	at uk.ac.bris.cs.scotlandyard.model.GameStateRoundTest.testMrXIsTheFirstToPlay(GameStateRoundTest.java:80)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1748,13 +1517,10 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testDetectiveLocationAlwaysCorrect[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@6f96c77](uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest)  Time elapsed: 0 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest.testDetectiveLocationAlwaysCorrect(GameStatePlayerTest.java:160)
+testDetectiveLocationAlwaysCorrect[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@659a969b](uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal move: TAXI(MRX@45, 46)
+	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.advance(MyGameStateFactory.java:169)
+	at uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest.testDetectiveLocationAlwaysCorrect(GameStatePlayerTest.java:165)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1802,13 +1568,10 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testDetectiveTicketsGivenToMrXOnlyAfterUse[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@6f96c77](uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest)  Time elapsed: 0 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest.testDetectiveTicketsGivenToMrXOnlyAfterUse(GameStatePlayerTest.java:54)
+testDetectiveTicketsGivenToMrXOnlyAfterUse[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@659a969b](uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal move: TAXI(MRX@45, 46)
+	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.advance(MyGameStateFactory.java:169)
+	at uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest.testDetectiveTicketsGivenToMrXOnlyAfterUse(GameStatePlayerTest.java:60)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1856,13 +1619,10 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testMrXMovesToDestinationAfterDoubleMove[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@6f96c77](uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest)  Time elapsed: 0 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest.testMrXMovesToDestinationAfterDoubleMove(GameStatePlayerTest.java:70)
+testMrXMovesToDestinationAfterDoubleMove[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@659a969b](uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal move: x2(MRX@45, TAXI, 46, TAXI, 47)
+	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.advance(MyGameStateFactory.java:169)
+	at uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest.testMrXMovesToDestinationAfterDoubleMove(GameStatePlayerTest.java:73)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1910,13 +1670,10 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testMrXCorrectTicketDecrementsAfterDoubleMove[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@6f96c77](uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest)  Time elapsed: 0 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest.testMrXCorrectTicketDecrementsAfterDoubleMove(GameStatePlayerTest.java:82)
+testMrXCorrectTicketDecrementsAfterDoubleMove[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@659a969b](uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal move: x2(MRX@45, TAXI, 46, BUS, 34)
+	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.advance(MyGameStateFactory.java:169)
+	at uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest.testMrXCorrectTicketDecrementsAfterDoubleMove(GameStatePlayerTest.java:86)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1964,13 +1721,10 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testMrXCorrectTicketDecrementsByOneAfterTicketMove[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@6f96c77](uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest)  Time elapsed: 0 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest.testMrXCorrectTicketDecrementsByOneAfterTicketMove(GameStatePlayerTest.java:108)
+testMrXCorrectTicketDecrementsByOneAfterTicketMove[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@659a969b](uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest)  Time elapsed: 0.002 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal move: TAXI(MRX@45, 46)
+	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.advance(MyGameStateFactory.java:169)
+	at uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest.testMrXCorrectTicketDecrementsByOneAfterTicketMove(GameStatePlayerTest.java:111)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2018,13 +1772,10 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testMrXTravelLogCorrectOnHiddenRound[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@6f96c77](uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest)  Time elapsed: 0.001 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest.testMrXTravelLogCorrectOnHiddenRound(GameStatePlayerTest.java:198)
+testMrXTravelLogCorrectOnHiddenRound[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@659a969b](uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal move: TAXI(MRX@45, 46)
+	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.advance(MyGameStateFactory.java:169)
+	at uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest.testMrXTravelLogCorrectOnHiddenRound(GameStatePlayerTest.java:204)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2072,13 +1823,10 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testDetectiveNotPickingAMoveDoesNotAffectMrX[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@6f96c77](uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest)  Time elapsed: 0 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest.testDetectiveNotPickingAMoveDoesNotAffectMrX(GameStatePlayerTest.java:42)
+testDetectiveNotPickingAMoveDoesNotAffectMrX[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@659a969b](uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal move: TAXI(MRX@45, 46)
+	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.advance(MyGameStateFactory.java:169)
+	at uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest.testDetectiveNotPickingAMoveDoesNotAffectMrX(GameStatePlayerTest.java:43)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2126,13 +1874,10 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testMrXTravelLogCorrectRevealRound[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@6f96c77](uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest)  Time elapsed: 0 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest.testMrXTravelLogCorrectRevealRound(GameStatePlayerTest.java:177)
+testMrXTravelLogCorrectRevealRound[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@659a969b](uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest)  Time elapsed: 0.002 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal move: TAXI(MRX@45, 46)
+	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.advance(MyGameStateFactory.java:169)
+	at uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest.testMrXTravelLogCorrectRevealRound(GameStatePlayerTest.java:184)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2180,13 +1925,10 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testMrXMovesToDestinationAfterTicketMove[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@6f96c77](uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest)  Time elapsed: 0.001 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest.testMrXMovesToDestinationAfterTicketMove(GameStatePlayerTest.java:95)
+testMrXMovesToDestinationAfterTicketMove[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@659a969b](uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal move: TAXI(MRX@45, 46)
+	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.advance(MyGameStateFactory.java:169)
+	at uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest.testMrXMovesToDestinationAfterTicketMove(GameStatePlayerTest.java:99)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2234,13 +1976,10 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testMrXTravelLogCorrectWithOneRevealRound[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@6f96c77](uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest)  Time elapsed: 0.002 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest.testMrXTravelLogCorrectWithOneRevealRound(GameStatePlayerTest.java:242)
+testMrXTravelLogCorrectWithOneRevealRound[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@659a969b](uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal move: TAXI(MRX@45, 46)
+	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.advance(MyGameStateFactory.java:169)
+	at uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest.testMrXTravelLogCorrectWithOneRevealRound(GameStatePlayerTest.java:244)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2288,13 +2027,10 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testMrXTravelLogCorrectWithOneHiddenRound[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@6f96c77](uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest)  Time elapsed: 0 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest.testMrXTravelLogCorrectWithOneHiddenRound(GameStatePlayerTest.java:252)
+testMrXTravelLogCorrectWithOneHiddenRound[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@659a969b](uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal move: TAXI(MRX@45, 46)
+	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.advance(MyGameStateFactory.java:169)
+	at uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest.testMrXTravelLogCorrectWithOneHiddenRound(GameStatePlayerTest.java:254)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2342,13 +2078,10 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testDetectiveLocationHoldsAfterPassMove[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@6f96c77](uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest)  Time elapsed: 0 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest.testDetectiveLocationHoldsAfterPassMove(GameStatePlayerTest.java:146)
+testDetectiveLocationHoldsAfterPassMove[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@659a969b](uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest)  Time elapsed: 0.004 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal move: TAXI(MRX@45, 46)
+	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.advance(MyGameStateFactory.java:169)
+	at uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest.testDetectiveLocationHoldsAfterPassMove(GameStatePlayerTest.java:149)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2396,13 +2129,10 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testDetectiveCorrectTicketDecrementsByOneAfterTicketMove[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@6f96c77](uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest)  Time elapsed: 0.003 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest.testDetectiveCorrectTicketDecrementsByOneAfterTicketMove(GameStatePlayerTest.java:132)
+testDetectiveCorrectTicketDecrementsByOneAfterTicketMove[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@659a969b](uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal move: TAXI(MRX@45, 46)
+	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.advance(MyGameStateFactory.java:169)
+	at uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest.testDetectiveCorrectTicketDecrementsByOneAfterTicketMove(GameStatePlayerTest.java:136)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2450,13 +2180,10 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testMrXTravelLogCorrectForDoubleMove[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@6f96c77](uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest)  Time elapsed: 0.002 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest.testMrXTravelLogCorrectForDoubleMove(GameStatePlayerTest.java:229)
+testMrXTravelLogCorrectForDoubleMove[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@659a969b](uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal move: TAXI(MRX@104, 116)
+	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.advance(MyGameStateFactory.java:169)
+	at uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest.testMrXTravelLogCorrectForDoubleMove(GameStatePlayerTest.java:230)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2504,13 +2231,10 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testDetectiveMovesToDestinationAfterTicketMove[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@6f96c77](uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest)  Time elapsed: 0 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest.testDetectiveMovesToDestinationAfterTicketMove(GameStatePlayerTest.java:119)
+testDetectiveMovesToDestinationAfterTicketMove[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@659a969b](uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal move: TAXI(MRX@45, 46)
+	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.advance(MyGameStateFactory.java:169)
+	at uk.ac.bris.cs.scotlandyard.model.GameStatePlayerTest.testDetectiveMovesToDestinationAfterTicketMove(GameStatePlayerTest.java:123)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2558,13 +2282,10 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testDetectiveMovesOmittedIfNotEnoughTickets[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@4b5d6a01](uk.ac.bris.cs.scotlandyard.model.GameStateDetectivesAvailableMovesTest)  Time elapsed: 0.007 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStateDetectivesAvailableMovesTest.testDetectiveMovesOmittedIfNotEnoughTickets(GameStateDetectivesAvailableMovesTest.java:98)
+testDetectiveMovesOmittedIfNotEnoughTickets[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@4c9f8c13](uk.ac.bris.cs.scotlandyard.model.GameStateDetectivesAvailableMovesTest)  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal move: TAXI(MRX@104, 86)
+	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.advance(MyGameStateFactory.java:169)
+	at uk.ac.bris.cs.scotlandyard.model.GameStateDetectivesAvailableMovesTest.testDetectiveMovesOmittedIfNotEnoughTickets(GameStateDetectivesAvailableMovesTest.java:99)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2612,13 +2333,10 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testDetectiveMoveNotOmittedIfDestinationOccupiedByMrX[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@4b5d6a01](uk.ac.bris.cs.scotlandyard.model.GameStateDetectivesAvailableMovesTest)  Time elapsed: 0 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStateDetectivesAvailableMovesTest.testDetectiveMoveNotOmittedIfDestinationOccupiedByMrX(GameStateDetectivesAvailableMovesTest.java:156)
+testDetectiveMoveNotOmittedIfDestinationOccupiedByMrX[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@4c9f8c13](uk.ac.bris.cs.scotlandyard.model.GameStateDetectivesAvailableMovesTest)  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal move: TAXI(MRX@86, 103)
+	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.advance(MyGameStateFactory.java:169)
+	at uk.ac.bris.cs.scotlandyard.model.GameStateDetectivesAvailableMovesTest.testDetectiveMoveNotOmittedIfDestinationOccupiedByMrX(GameStateDetectivesAvailableMovesTest.java:157)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2666,13 +2384,10 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testDetectiveAt128MovesShouldProduce13ValidMoves[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@4b5d6a01](uk.ac.bris.cs.scotlandyard.model.GameStateDetectivesAvailableMovesTest)  Time elapsed: 0 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStateDetectivesAvailableMovesTest.testDetectiveAt128MovesShouldProduce13ValidMoves(GameStateDetectivesAvailableMovesTest.java:35)
+testDetectiveAt128MovesShouldProduce13ValidMoves[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@4c9f8c13](uk.ac.bris.cs.scotlandyard.model.GameStateDetectivesAvailableMovesTest)  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal move: TAXI(MRX@104, 86)
+	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.advance(MyGameStateFactory.java:169)
+	at uk.ac.bris.cs.scotlandyard.model.GameStateDetectivesAvailableMovesTest.testDetectiveAt128MovesShouldProduce13ValidMoves(GameStateDetectivesAvailableMovesTest.java:36)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2720,13 +2435,10 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testDetectiveMoveOmittedIfAlreadyPlayed[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@4b5d6a01](uk.ac.bris.cs.scotlandyard.model.GameStateDetectivesAvailableMovesTest)  Time elapsed: 0.001 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStateDetectivesAvailableMovesTest.testDetectiveMoveOmittedIfAlreadyPlayed(GameStateDetectivesAvailableMovesTest.java:142)
+testDetectiveMoveOmittedIfAlreadyPlayed[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@4c9f8c13](uk.ac.bris.cs.scotlandyard.model.GameStateDetectivesAvailableMovesTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal move: TAXI(MRX@104, 86)
+	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.advance(MyGameStateFactory.java:169)
+	at uk.ac.bris.cs.scotlandyard.model.GameStateDetectivesAvailableMovesTest.testDetectiveMoveOmittedIfAlreadyPlayed(GameStateDetectivesAvailableMovesTest.java:143)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2774,13 +2486,10 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testMultipleDetectivesShouldProduceValidMoves[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@4b5d6a01](uk.ac.bris.cs.scotlandyard.model.GameStateDetectivesAvailableMovesTest)  Time elapsed: 0 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStateDetectivesAvailableMovesTest.testMultipleDetectivesShouldProduceValidMoves(GameStateDetectivesAvailableMovesTest.java:61)
+testMultipleDetectivesShouldProduceValidMoves[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@4c9f8c13](uk.ac.bris.cs.scotlandyard.model.GameStateDetectivesAvailableMovesTest)  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal move: x2(MRX@106, TAXI, 105, BUS, 87)
+	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.advance(MyGameStateFactory.java:169)
+	at uk.ac.bris.cs.scotlandyard.model.GameStateDetectivesAvailableMovesTest.testMultipleDetectivesShouldProduceValidMoves(GameStateDetectivesAvailableMovesTest.java:64)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2828,13 +2537,10 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testDetectiveMoveOmittedIfLocationOccupiedByOtherDetective[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@4b5d6a01](uk.ac.bris.cs.scotlandyard.model.GameStateDetectivesAvailableMovesTest)  Time elapsed: 0 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStateDetectivesAvailableMovesTest.testDetectiveMoveOmittedIfLocationOccupiedByOtherDetective(GameStateDetectivesAvailableMovesTest.java:131)
+testDetectiveMoveOmittedIfLocationOccupiedByOtherDetective[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@4c9f8c13](uk.ac.bris.cs.scotlandyard.model.GameStateDetectivesAvailableMovesTest)  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal move: TAXI(MRX@104, 86)
+	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.advance(MyGameStateFactory.java:169)
+	at uk.ac.bris.cs.scotlandyard.model.GameStateDetectivesAvailableMovesTest.testDetectiveMoveOmittedIfLocationOccupiedByOtherDetective(GameStateDetectivesAvailableMovesTest.java:132)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2882,13 +2588,10 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testDetectiveWithNoValidMovesShouldProduceNoMove[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@4b5d6a01](uk.ac.bris.cs.scotlandyard.model.GameStateDetectivesAvailableMovesTest)  Time elapsed: 0 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStateDetectivesAvailableMovesTest.testDetectiveWithNoValidMovesShouldProduceNoMove(GameStateDetectivesAvailableMovesTest.java:116)
+testDetectiveWithNoValidMovesShouldProduceNoMove[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@4c9f8c13](uk.ac.bris.cs.scotlandyard.model.GameStateDetectivesAvailableMovesTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal move: TAXI(MRX@104, 86)
+	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.advance(MyGameStateFactory.java:169)
+	at uk.ac.bris.cs.scotlandyard.model.GameStateDetectivesAvailableMovesTest.testDetectiveWithNoValidMovesShouldProduceNoMove(GameStateDetectivesAvailableMovesTest.java:117)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2936,13 +2639,139 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testMrXAt104ShouldProduce60ValidMoves[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@cd3fee8](uk.ac.bris.cs.scotlandyard.model.GameStateMrXAvailableMovesTest)  Time elapsed: 0.001 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStateMrXAvailableMovesTest.testMrXAt104ShouldProduce60ValidMoves(GameStateMrXAvailableMovesTest.java:181)
+testMrXAt104ShouldProduce60ValidMoves[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@48e4374](uk.ac.bris.cs.scotlandyard.model.GameStateMrXAvailableMovesTest)  Time elapsed: 0.006 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting:
+  [TAXI(BLUE@117, 88),
+    TAXI(BLUE@117, 108),
+    TAXI(BLUE@117, 116),
+    TAXI(BLUE@117, 129),
+    TAXI(MRX@104, 86),
+    x2(MRX@104, TAXI, 86, TAXI, 104),
+    x2(MRX@104, TAXI, 86, SECRET, 104),
+    x2(MRX@104, TAXI, 86, BUS, 52),
+    x2(MRX@104, TAXI, 86, SECRET, 52),
+    x2(MRX@104, TAXI, 86, BUS, 116),
+    x2(MRX@104, TAXI, 86, SECRET, 116),
+    x2(MRX@104, TAXI, 86, TAXI, 69),
+    x2(MRX@104, TAXI, 86, SECRET, 69),
+    x2(MRX@104, TAXI, 86, BUS, 102),
+    x2(MRX@104, TAXI, 86, SECRET, 102),
+    x2(MRX@104, TAXI, 86, BUS, 87),
+    x2(MRX@104, TAXI, 86, SECRET, 87),
+    x2(MRX@104, TAXI, 86, TAXI, 103),
+    x2(MRX@104, TAXI, 86, SECRET, 103),
+    SECRET(MRX@104, 86),
+    TAXI(MRX@104, 116),
+    x2(MRX@104, TAXI, 116, TAXI, 104),
+    x2(MRX@104, TAXI, 116, SECRET, 104),
+    x2(MRX@104, TAXI, 116, BUS, 108),
+    x2(MRX@104, TAXI, 116, SECRET, 108),
+    x2(MRX@104, TAXI, 116, BUS, 86),
+    x2(MRX@104, TAXI, 116, SECRET, 86),
+    x2(MRX@104, TAXI, 116, TAXI, 118),
+    x2(MRX@104, TAXI, 116, SECRET, 118),
+    x2(MRX@104, TAXI, 116, BUS, 142),
+    x2(MRX@104, TAXI, 116, SECRET, 142),
+    x2(MRX@104, TAXI, 116, TAXI, 127),
+    x2(MRX@104, TAXI, 116, BUS, 127),
+    x2(MRX@104, TAXI, 116, SECRET, 127),
+    SECRET(MRX@104, 116)]
+to contain exactly in any order:
+  [TAXI(MRX@104, 86),
+    x2(MRX@104, TAXI, 86, TAXI, 104),
+    x2(MRX@104, TAXI, 86, SECRET, 104),
+    x2(MRX@104, TAXI, 86, BUS, 52),
+    x2(MRX@104, TAXI, 86, SECRET, 52),
+    x2(MRX@104, TAXI, 86, BUS, 116),
+    x2(MRX@104, TAXI, 86, SECRET, 116),
+    x2(MRX@104, TAXI, 86, TAXI, 69),
+    x2(MRX@104, TAXI, 86, SECRET, 69),
+    x2(MRX@104, TAXI, 86, BUS, 102),
+    x2(MRX@104, TAXI, 86, SECRET, 102),
+    x2(MRX@104, TAXI, 86, BUS, 87),
+    x2(MRX@104, TAXI, 86, SECRET, 87),
+    x2(MRX@104, TAXI, 86, TAXI, 103),
+    x2(MRX@104, TAXI, 86, SECRET, 103),
+    SECRET(MRX@104, 86),
+    x2(MRX@104, SECRET, 86, TAXI, 104),
+    x2(MRX@104, SECRET, 86, SECRET, 104),
+    x2(MRX@104, SECRET, 86, BUS, 52),
+    x2(MRX@104, SECRET, 86, SECRET, 52),
+    x2(MRX@104, SECRET, 86, BUS, 116),
+    x2(MRX@104, SECRET, 86, SECRET, 116),
+    x2(MRX@104, SECRET, 86, TAXI, 69),
+    x2(MRX@104, SECRET, 86, SECRET, 69),
+    x2(MRX@104, SECRET, 86, BUS, 102),
+    x2(MRX@104, SECRET, 86, SECRET, 102),
+    x2(MRX@104, SECRET, 86, BUS, 87),
+    x2(MRX@104, SECRET, 86, SECRET, 87),
+    x2(MRX@104, SECRET, 86, TAXI, 103),
+    x2(MRX@104, SECRET, 86, SECRET, 103),
+    TAXI(MRX@104, 116),
+    x2(MRX@104, TAXI, 116, TAXI, 104),
+    x2(MRX@104, TAXI, 116, SECRET, 104),
+    x2(MRX@104, TAXI, 116, BUS, 108),
+    x2(MRX@104, TAXI, 116, SECRET, 108),
+    x2(MRX@104, TAXI, 116, BUS, 86),
+    x2(MRX@104, TAXI, 116, SECRET, 86),
+    x2(MRX@104, TAXI, 116, TAXI, 118),
+    x2(MRX@104, TAXI, 116, SECRET, 118),
+    x2(MRX@104, TAXI, 116, BUS, 142),
+    x2(MRX@104, TAXI, 116, SECRET, 142),
+    x2(MRX@104, TAXI, 116, TAXI, 127),
+    x2(MRX@104, TAXI, 116, SECRET, 127),
+    x2(MRX@104, TAXI, 116, BUS, 127),
+    SECRET(MRX@104, 116),
+    x2(MRX@104, SECRET, 116, TAXI, 104),
+    x2(MRX@104, SECRET, 116, SECRET, 104),
+    x2(MRX@104, SECRET, 116, BUS, 108),
+    x2(MRX@104, SECRET, 116, SECRET, 108),
+    x2(MRX@104, SECRET, 116, BUS, 86),
+    x2(MRX@104, SECRET, 116, SECRET, 86),
+    x2(MRX@104, SECRET, 116, TAXI, 118),
+    x2(MRX@104, SECRET, 116, SECRET, 118),
+    x2(MRX@104, SECRET, 116, BUS, 142),
+    x2(MRX@104, SECRET, 116, SECRET, 142),
+    x2(MRX@104, SECRET, 116, TAXI, 127),
+    x2(MRX@104, SECRET, 116, SECRET, 127),
+    x2(MRX@104, SECRET, 116, BUS, 127)]
+elements not found:
+  [x2(MRX@104, SECRET, 86, TAXI, 104),
+    x2(MRX@104, SECRET, 86, SECRET, 104),
+    x2(MRX@104, SECRET, 86, BUS, 52),
+    x2(MRX@104, SECRET, 86, SECRET, 52),
+    x2(MRX@104, SECRET, 86, BUS, 116),
+    x2(MRX@104, SECRET, 86, SECRET, 116),
+    x2(MRX@104, SECRET, 86, TAXI, 69),
+    x2(MRX@104, SECRET, 86, SECRET, 69),
+    x2(MRX@104, SECRET, 86, BUS, 102),
+    x2(MRX@104, SECRET, 86, SECRET, 102),
+    x2(MRX@104, SECRET, 86, BUS, 87),
+    x2(MRX@104, SECRET, 86, SECRET, 87),
+    x2(MRX@104, SECRET, 86, TAXI, 103),
+    x2(MRX@104, SECRET, 86, SECRET, 103),
+    x2(MRX@104, SECRET, 116, TAXI, 104),
+    x2(MRX@104, SECRET, 116, SECRET, 104),
+    x2(MRX@104, SECRET, 116, BUS, 108),
+    x2(MRX@104, SECRET, 116, SECRET, 108),
+    x2(MRX@104, SECRET, 116, BUS, 86),
+    x2(MRX@104, SECRET, 116, SECRET, 86),
+    x2(MRX@104, SECRET, 116, TAXI, 118),
+    x2(MRX@104, SECRET, 116, SECRET, 118),
+    x2(MRX@104, SECRET, 116, BUS, 142),
+    x2(MRX@104, SECRET, 116, SECRET, 142),
+    x2(MRX@104, SECRET, 116, TAXI, 127),
+    x2(MRX@104, SECRET, 116, SECRET, 127),
+    x2(MRX@104, SECRET, 116, BUS, 127)]
+and elements not expected:
+  [TAXI(BLUE@117, 88),
+    TAXI(BLUE@117, 108),
+    TAXI(BLUE@117, 116),
+    TAXI(BLUE@117, 129)]
+
+	at uk.ac.bris.cs.scotlandyard.model.GameStateMrXAvailableMovesTest.testMrXAt104ShouldProduce60ValidMoves(GameStateMrXAvailableMovesTest.java:182)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2990,13 +2819,25 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testMrXNoTicketMovesIfNoTicketMoveTickets[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@cd3fee8](uk.ac.bris.cs.scotlandyard.model.GameStateMrXAvailableMovesTest)  Time elapsed: 0 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStateMrXAvailableMovesTest.testMrXNoTicketMovesIfNoTicketMoveTickets(GameStateMrXAvailableMovesTest.java:153)
+testMrXNoTicketMovesIfNoTicketMoveTickets[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@48e4374](uk.ac.bris.cs.scotlandyard.model.GameStateMrXAvailableMovesTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting:
+  [TAXI(BLUE@117, 88),
+    TAXI(BLUE@117, 108),
+    TAXI(BLUE@117, 116),
+    TAXI(BLUE@117, 129),
+    TAXI(MRX@104, 86),
+    TAXI(MRX@104, 116)]
+to contain exactly in any order:
+  [TAXI(MRX@104, 86), TAXI(MRX@104, 116)]
+but the following elements were unexpected:
+  [TAXI(BLUE@117, 88),
+    TAXI(BLUE@117, 108),
+    TAXI(BLUE@117, 116),
+    TAXI(BLUE@117, 129)]
+
+	at uk.ac.bris.cs.scotlandyard.model.GameStateMrXAvailableMovesTest.testMrXNoTicketMovesIfNoTicketMoveTickets(GameStateMrXAvailableMovesTest.java:157)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -3044,13 +2885,33 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testMrXMovesOmittedIfDestinationOccupiedByDetectives[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@cd3fee8](uk.ac.bris.cs.scotlandyard.model.GameStateMrXAvailableMovesTest)  Time elapsed: 0.001 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStateMrXAvailableMovesTest.testMrXMovesOmittedIfDestinationOccupiedByDetectives(GameStateMrXAvailableMovesTest.java:68)
+testMrXMovesOmittedIfDestinationOccupiedByDetectives[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@48e4374](uk.ac.bris.cs.scotlandyard.model.GameStateMrXAvailableMovesTest)  Time elapsed: 0.006 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting:
+  [TAXI(BLUE@116, 104),
+    BUS(BLUE@116, 108),
+    TAXI(BLUE@116, 117),
+    BUS(BLUE@116, 86),
+    TAXI(BLUE@116, 118),
+    BUS(BLUE@116, 142),
+    TAXI(BLUE@116, 127),
+    BUS(BLUE@116, 127),
+    TAXI(MRX@104, 86),
+    SECRET(MRX@104, 86)]
+to contain exactly in any order:
+  [TAXI(MRX@104, 86), SECRET(MRX@104, 86)]
+but the following elements were unexpected:
+  [TAXI(BLUE@116, 104),
+    BUS(BLUE@116, 108),
+    TAXI(BLUE@116, 117),
+    BUS(BLUE@116, 86),
+    TAXI(BLUE@116, 118),
+    BUS(BLUE@116, 142),
+    TAXI(BLUE@116, 127),
+    BUS(BLUE@116, 127)]
+
+	at uk.ac.bris.cs.scotlandyard.model.GameStateMrXAvailableMovesTest.testMrXMovesOmittedIfDestinationOccupiedByDetectives(GameStateMrXAvailableMovesTest.java:70)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -3098,13 +2959,42 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testMrXMustHaveEnoughTicketsForDoubleMove[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@cd3fee8](uk.ac.bris.cs.scotlandyard.model.GameStateMrXAvailableMovesTest)  Time elapsed: 0.001 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStateMrXAvailableMovesTest.testMrXMustHaveEnoughTicketsForDoubleMove(GameStateMrXAvailableMovesTest.java:78)
+testMrXMustHaveEnoughTicketsForDoubleMove[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@48e4374](uk.ac.bris.cs.scotlandyard.model.GameStateMrXAvailableMovesTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting:
+  [TAXI(BLUE@117, 88),
+    TAXI(BLUE@117, 108),
+    TAXI(BLUE@117, 116),
+    TAXI(BLUE@117, 129),
+    TAXI(MRX@104, 86),
+    x2(MRX@104, TAXI, 86, BUS, 52),
+    x2(MRX@104, TAXI, 86, BUS, 116),
+    x2(MRX@104, TAXI, 86, BUS, 102),
+    x2(MRX@104, TAXI, 86, BUS, 87),
+    TAXI(MRX@104, 116),
+    x2(MRX@104, TAXI, 116, BUS, 108),
+    x2(MRX@104, TAXI, 116, BUS, 86),
+    x2(MRX@104, TAXI, 116, BUS, 142),
+    x2(MRX@104, TAXI, 116, BUS, 127)]
+to contain exactly in any order:
+  [TAXI(MRX@104, 86),
+    TAXI(MRX@104, 116),
+    x2(MRX@104, TAXI, 86, BUS, 52),
+    x2(MRX@104, TAXI, 86, BUS, 87),
+    x2(MRX@104, TAXI, 86, BUS, 102),
+    x2(MRX@104, TAXI, 86, BUS, 116),
+    x2(MRX@104, TAXI, 116, BUS, 86),
+    x2(MRX@104, TAXI, 116, BUS, 108),
+    x2(MRX@104, TAXI, 116, BUS, 127),
+    x2(MRX@104, TAXI, 116, BUS, 142)]
+but the following elements were unexpected:
+  [TAXI(BLUE@117, 88),
+    TAXI(BLUE@117, 108),
+    TAXI(BLUE@117, 116),
+    TAXI(BLUE@117, 129)]
+
+	at uk.ac.bris.cs.scotlandyard.model.GameStateMrXAvailableMovesTest.testMrXMustHaveEnoughTicketsForDoubleMove(GameStateMrXAvailableMovesTest.java:79)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -3152,13 +3042,25 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testMrXOnlySecretMovesIfOnlySecretMoveTicketsLeft[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@cd3fee8](uk.ac.bris.cs.scotlandyard.model.GameStateMrXAvailableMovesTest)  Time elapsed: 0 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStateMrXAvailableMovesTest.testMrXOnlySecretMovesIfOnlySecretMoveTicketsLeft(GameStateMrXAvailableMovesTest.java:167)
+testMrXOnlySecretMovesIfOnlySecretMoveTicketsLeft[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@48e4374](uk.ac.bris.cs.scotlandyard.model.GameStateMrXAvailableMovesTest)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting:
+  [TAXI(BLUE@117, 88),
+    TAXI(BLUE@117, 108),
+    TAXI(BLUE@117, 116),
+    TAXI(BLUE@117, 129),
+    SECRET(MRX@104, 86),
+    SECRET(MRX@104, 116)]
+to contain exactly in any order:
+  [SECRET(MRX@104, 86), SECRET(MRX@104, 116)]
+but the following elements were unexpected:
+  [TAXI(BLUE@117, 88),
+    TAXI(BLUE@117, 108),
+    TAXI(BLUE@117, 116),
+    TAXI(BLUE@117, 129)]
+
+	at uk.ac.bris.cs.scotlandyard.model.GameStateMrXAvailableMovesTest.testMrXOnlySecretMovesIfOnlySecretMoveTicketsLeft(GameStateMrXAvailableMovesTest.java:171)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -3206,13 +3108,84 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testMrXNoDoubleMovesIfNotEnoughRoundLeft[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@cd3fee8](uk.ac.bris.cs.scotlandyard.model.GameStateMrXAvailableMovesTest)  Time elapsed: 0.001 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStateMrXAvailableMovesTest.testMrXNoDoubleMovesIfNotEnoughRoundLeft(GameStateMrXAvailableMovesTest.java:137)
+testMrXNoDoubleMovesIfNotEnoughRoundLeft[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@48e4374](uk.ac.bris.cs.scotlandyard.model.GameStateMrXAvailableMovesTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting:
+  [TAXI(BLUE@117, 88),
+    TAXI(BLUE@117, 108),
+    TAXI(BLUE@117, 116),
+    TAXI(BLUE@117, 129),
+    TAXI(MRX@104, 86),
+    x2(MRX@104, TAXI, 86, TAXI, 104),
+    x2(MRX@104, TAXI, 86, SECRET, 104),
+    x2(MRX@104, TAXI, 86, BUS, 52),
+    x2(MRX@104, TAXI, 86, SECRET, 52),
+    x2(MRX@104, TAXI, 86, BUS, 116),
+    x2(MRX@104, TAXI, 86, SECRET, 116),
+    x2(MRX@104, TAXI, 86, TAXI, 69),
+    x2(MRX@104, TAXI, 86, SECRET, 69),
+    x2(MRX@104, TAXI, 86, BUS, 102),
+    x2(MRX@104, TAXI, 86, SECRET, 102),
+    x2(MRX@104, TAXI, 86, BUS, 87),
+    x2(MRX@104, TAXI, 86, SECRET, 87),
+    x2(MRX@104, TAXI, 86, TAXI, 103),
+    x2(MRX@104, TAXI, 86, SECRET, 103),
+    SECRET(MRX@104, 86),
+    TAXI(MRX@104, 116),
+    x2(MRX@104, TAXI, 116, TAXI, 104),
+    x2(MRX@104, TAXI, 116, SECRET, 104),
+    x2(MRX@104, TAXI, 116, BUS, 108),
+    x2(MRX@104, TAXI, 116, SECRET, 108),
+    x2(MRX@104, TAXI, 116, BUS, 86),
+    x2(MRX@104, TAXI, 116, SECRET, 86),
+    x2(MRX@104, TAXI, 116, TAXI, 118),
+    x2(MRX@104, TAXI, 116, SECRET, 118),
+    x2(MRX@104, TAXI, 116, BUS, 142),
+    x2(MRX@104, TAXI, 116, SECRET, 142),
+    x2(MRX@104, TAXI, 116, TAXI, 127),
+    x2(MRX@104, TAXI, 116, BUS, 127),
+    x2(MRX@104, TAXI, 116, SECRET, 127),
+    SECRET(MRX@104, 116)]
+to contain exactly in any order:
+  [TAXI(MRX@104, 86),
+    SECRET(MRX@104, 86),
+    TAXI(MRX@104, 116),
+    SECRET(MRX@104, 116)]
+but the following elements were unexpected:
+  [TAXI(BLUE@117, 88),
+    TAXI(BLUE@117, 108),
+    TAXI(BLUE@117, 116),
+    TAXI(BLUE@117, 129),
+    x2(MRX@104, TAXI, 86, TAXI, 104),
+    x2(MRX@104, TAXI, 86, SECRET, 104),
+    x2(MRX@104, TAXI, 86, BUS, 52),
+    x2(MRX@104, TAXI, 86, SECRET, 52),
+    x2(MRX@104, TAXI, 86, BUS, 116),
+    x2(MRX@104, TAXI, 86, SECRET, 116),
+    x2(MRX@104, TAXI, 86, TAXI, 69),
+    x2(MRX@104, TAXI, 86, SECRET, 69),
+    x2(MRX@104, TAXI, 86, BUS, 102),
+    x2(MRX@104, TAXI, 86, SECRET, 102),
+    x2(MRX@104, TAXI, 86, BUS, 87),
+    x2(MRX@104, TAXI, 86, SECRET, 87),
+    x2(MRX@104, TAXI, 86, TAXI, 103),
+    x2(MRX@104, TAXI, 86, SECRET, 103),
+    x2(MRX@104, TAXI, 116, TAXI, 104),
+    x2(MRX@104, TAXI, 116, SECRET, 104),
+    x2(MRX@104, TAXI, 116, BUS, 108),
+    x2(MRX@104, TAXI, 116, SECRET, 108),
+    x2(MRX@104, TAXI, 116, BUS, 86),
+    x2(MRX@104, TAXI, 116, SECRET, 86),
+    x2(MRX@104, TAXI, 116, TAXI, 118),
+    x2(MRX@104, TAXI, 116, SECRET, 118),
+    x2(MRX@104, TAXI, 116, BUS, 142),
+    x2(MRX@104, TAXI, 116, SECRET, 142),
+    x2(MRX@104, TAXI, 116, TAXI, 127),
+    x2(MRX@104, TAXI, 116, BUS, 127),
+    x2(MRX@104, TAXI, 116, SECRET, 127)]
+
+	at uk.ac.bris.cs.scotlandyard.model.GameStateMrXAvailableMovesTest.testMrXNoDoubleMovesIfNotEnoughRoundLeft(GameStateMrXAvailableMovesTest.java:141)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -3260,13 +3233,30 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testMrXNoDoubleMovesIfNoDoubleMoveTickets[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@cd3fee8](uk.ac.bris.cs.scotlandyard.model.GameStateMrXAvailableMovesTest)  Time elapsed: 0 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStateMrXAvailableMovesTest.testMrXNoDoubleMovesIfNoDoubleMoveTickets(GameStateMrXAvailableMovesTest.java:123)
+testMrXNoDoubleMovesIfNoDoubleMoveTickets[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@48e4374](uk.ac.bris.cs.scotlandyard.model.GameStateMrXAvailableMovesTest)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting:
+  [TAXI(BLUE@117, 88),
+    TAXI(BLUE@117, 108),
+    TAXI(BLUE@117, 116),
+    TAXI(BLUE@117, 129),
+    TAXI(MRX@104, 86),
+    SECRET(MRX@104, 86),
+    TAXI(MRX@104, 116),
+    SECRET(MRX@104, 116)]
+to contain exactly in any order:
+  [TAXI(MRX@104, 86),
+    SECRET(MRX@104, 86),
+    TAXI(MRX@104, 116),
+    SECRET(MRX@104, 116)]
+but the following elements were unexpected:
+  [TAXI(BLUE@117, 88),
+    TAXI(BLUE@117, 108),
+    TAXI(BLUE@117, 116),
+    TAXI(BLUE@117, 129)]
+
+	at uk.ac.bris.cs.scotlandyard.model.GameStateMrXAvailableMovesTest.testMrXNoDoubleMovesIfNoDoubleMoveTickets(GameStateMrXAvailableMovesTest.java:125)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -3314,13 +3304,83 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testMrXDoubleMoveIntermediateMovesOmittedIfDestinationOccupiedByDetectives[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@cd3fee8](uk.ac.bris.cs.scotlandyard.model.GameStateMrXAvailableMovesTest)  Time elapsed: 0.001 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStateMrXAvailableMovesTest.testMrXDoubleMoveIntermediateMovesOmittedIfDestinationOccupiedByDetectives(GameStateMrXAvailableMovesTest.java:32)
+testMrXDoubleMoveIntermediateMovesOmittedIfDestinationOccupiedByDetectives[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@48e4374](uk.ac.bris.cs.scotlandyard.model.GameStateMrXAvailableMovesTest)  Time elapsed: 0.003 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting:
+  [TAXI(BLUE@116, 104),
+    BUS(BLUE@116, 108),
+    TAXI(BLUE@116, 117),
+    BUS(BLUE@116, 86),
+    TAXI(BLUE@116, 118),
+    BUS(BLUE@116, 142),
+    TAXI(BLUE@116, 127),
+    BUS(BLUE@116, 127),
+    TAXI(MRX@104, 86),
+    x2(MRX@104, TAXI, 86, TAXI, 104),
+    x2(MRX@104, TAXI, 86, SECRET, 104),
+    x2(MRX@104, TAXI, 86, BUS, 52),
+    x2(MRX@104, TAXI, 86, SECRET, 52),
+    x2(MRX@104, TAXI, 86, TAXI, 69),
+    x2(MRX@104, TAXI, 86, SECRET, 69),
+    x2(MRX@104, TAXI, 86, BUS, 102),
+    x2(MRX@104, TAXI, 86, SECRET, 102),
+    x2(MRX@104, TAXI, 86, BUS, 87),
+    x2(MRX@104, TAXI, 86, SECRET, 87),
+    x2(MRX@104, TAXI, 86, TAXI, 103),
+    x2(MRX@104, TAXI, 86, SECRET, 103),
+    SECRET(MRX@104, 86)]
+to contain exactly in any order:
+  [TAXI(MRX@104, 86),
+    SECRET(MRX@104, 86),
+    x2(MRX@104, TAXI, 86, BUS, 52),
+    x2(MRX@104, TAXI, 86, SECRET, 52),
+    x2(MRX@104, TAXI, 86, TAXI, 69),
+    x2(MRX@104, TAXI, 86, SECRET, 69),
+    x2(MRX@104, TAXI, 86, BUS, 87),
+    x2(MRX@104, TAXI, 86, SECRET, 87),
+    x2(MRX@104, TAXI, 86, BUS, 102),
+    x2(MRX@104, TAXI, 86, SECRET, 102),
+    x2(MRX@104, TAXI, 86, TAXI, 103),
+    x2(MRX@104, TAXI, 86, SECRET, 103),
+    x2(MRX@104, TAXI, 86, TAXI, 104),
+    x2(MRX@104, TAXI, 86, SECRET, 104),
+    x2(MRX@104, SECRET, 86, BUS, 52),
+    x2(MRX@104, SECRET, 86, SECRET, 52),
+    x2(MRX@104, SECRET, 86, TAXI, 69),
+    x2(MRX@104, SECRET, 86, SECRET, 69),
+    x2(MRX@104, SECRET, 86, BUS, 87),
+    x2(MRX@104, SECRET, 86, SECRET, 87),
+    x2(MRX@104, SECRET, 86, BUS, 102),
+    x2(MRX@104, SECRET, 86, SECRET, 102),
+    x2(MRX@104, SECRET, 86, TAXI, 103),
+    x2(MRX@104, SECRET, 86, SECRET, 103),
+    x2(MRX@104, SECRET, 86, TAXI, 104),
+    x2(MRX@104, SECRET, 86, SECRET, 104)]
+elements not found:
+  [x2(MRX@104, SECRET, 86, BUS, 52),
+    x2(MRX@104, SECRET, 86, SECRET, 52),
+    x2(MRX@104, SECRET, 86, TAXI, 69),
+    x2(MRX@104, SECRET, 86, SECRET, 69),
+    x2(MRX@104, SECRET, 86, BUS, 87),
+    x2(MRX@104, SECRET, 86, SECRET, 87),
+    x2(MRX@104, SECRET, 86, BUS, 102),
+    x2(MRX@104, SECRET, 86, SECRET, 102),
+    x2(MRX@104, SECRET, 86, TAXI, 103),
+    x2(MRX@104, SECRET, 86, SECRET, 103),
+    x2(MRX@104, SECRET, 86, TAXI, 104),
+    x2(MRX@104, SECRET, 86, SECRET, 104)]
+and elements not expected:
+  [TAXI(BLUE@116, 104),
+    BUS(BLUE@116, 108),
+    TAXI(BLUE@116, 117),
+    BUS(BLUE@116, 86),
+    TAXI(BLUE@116, 118),
+    BUS(BLUE@116, 142),
+    TAXI(BLUE@116, 127),
+    BUS(BLUE@116, 127)]
+
+	at uk.ac.bris.cs.scotlandyard.model.GameStateMrXAvailableMovesTest.testMrXDoubleMoveIntermediateMovesOmittedIfDestinationOccupiedByDetectives(GameStateMrXAvailableMovesTest.java:34)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -3368,13 +3428,54 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testMrXNoSecretMovesIfNoSecretMoveTickets[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@cd3fee8](uk.ac.bris.cs.scotlandyard.model.GameStateMrXAvailableMovesTest)  Time elapsed: 0 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStateMrXAvailableMovesTest.testMrXNoSecretMovesIfNoSecretMoveTickets(GameStateMrXAvailableMovesTest.java:98)
+testMrXNoSecretMovesIfNoSecretMoveTickets[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@48e4374](uk.ac.bris.cs.scotlandyard.model.GameStateMrXAvailableMovesTest)  Time elapsed: 0.006 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting:
+  [TAXI(BLUE@117, 88),
+    TAXI(BLUE@117, 108),
+    TAXI(BLUE@117, 116),
+    TAXI(BLUE@117, 129),
+    TAXI(MRX@104, 86),
+    x2(MRX@104, TAXI, 86, TAXI, 104),
+    x2(MRX@104, TAXI, 86, BUS, 52),
+    x2(MRX@104, TAXI, 86, BUS, 116),
+    x2(MRX@104, TAXI, 86, TAXI, 69),
+    x2(MRX@104, TAXI, 86, BUS, 102),
+    x2(MRX@104, TAXI, 86, BUS, 87),
+    x2(MRX@104, TAXI, 86, TAXI, 103),
+    TAXI(MRX@104, 116),
+    x2(MRX@104, TAXI, 116, TAXI, 104),
+    x2(MRX@104, TAXI, 116, BUS, 108),
+    x2(MRX@104, TAXI, 116, BUS, 86),
+    x2(MRX@104, TAXI, 116, TAXI, 118),
+    x2(MRX@104, TAXI, 116, BUS, 142),
+    x2(MRX@104, TAXI, 116, TAXI, 127),
+    x2(MRX@104, TAXI, 116, BUS, 127)]
+to contain exactly in any order:
+  [TAXI(MRX@104, 86),
+    TAXI(MRX@104, 116),
+    x2(MRX@104, TAXI, 86, BUS, 52),
+    x2(MRX@104, TAXI, 86, TAXI, 69),
+    x2(MRX@104, TAXI, 86, BUS, 87),
+    x2(MRX@104, TAXI, 86, BUS, 102),
+    x2(MRX@104, TAXI, 86, TAXI, 103),
+    x2(MRX@104, TAXI, 86, TAXI, 104),
+    x2(MRX@104, TAXI, 86, BUS, 116),
+    x2(MRX@104, TAXI, 116, BUS, 86),
+    x2(MRX@104, TAXI, 116, TAXI, 104),
+    x2(MRX@104, TAXI, 116, BUS, 108),
+    x2(MRX@104, TAXI, 116, TAXI, 118),
+    x2(MRX@104, TAXI, 116, TAXI, 127),
+    x2(MRX@104, TAXI, 116, BUS, 127),
+    x2(MRX@104, TAXI, 116, BUS, 142)]
+but the following elements were unexpected:
+  [TAXI(BLUE@117, 88),
+    TAXI(BLUE@117, 108),
+    TAXI(BLUE@117, 116),
+    TAXI(BLUE@117, 129)]
+
+	at uk.ac.bris.cs.scotlandyard.model.GameStateMrXAvailableMovesTest.testMrXNoSecretMovesIfNoSecretMoveTickets(GameStateMrXAvailableMovesTest.java:99)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -3422,13 +3523,10 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-test2RoundSimpleGame[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@1622f1b](uk.ac.bris.cs.scotlandyard.model.GameStatePlayoutTest)  Time elapsed: 0 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid detectives
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.<init>(MyGameStateFactory.java:141)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:150)
-	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory.build(MyGameStateFactory.java:18)
-	at uk.ac.bris.cs.scotlandyard.model.ScotlandYard$Factory.build(ScotlandYard.java:275)
-	at uk.ac.bris.cs.scotlandyard.model.GameStatePlayoutTest.test2RoundSimpleGame(GameStatePlayoutTest.java:35)
+test2RoundSimpleGame[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@61230f6a](uk.ac.bris.cs.scotlandyard.model.GameStatePlayoutTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal move: x2(MRX@106, TAXI, 105, BUS, 87)
+	at uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory$MyGameState.advance(MyGameStateFactory.java:169)
+	at uk.ac.bris.cs.scotlandyard.model.GameStatePlayoutTest.test2RoundSimpleGame(GameStatePlayoutTest.java:38)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -3476,7 +3574,7 @@ java.lang.IllegalArgumentException: Invalid detectives
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testFinalRoundShouldNotifyGameOverOnce[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@29626d54](uk.ac.bris.cs.scotlandyard.model.ModelObserverTest)  Time elapsed: 0.151 s  <<< ERROR!
+testFinalRoundShouldNotifyGameOverOnce[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@703580bf](uk.ac.bris.cs.scotlandyard.model.ModelObserverTest)  Time elapsed: 0.134 s  <<< ERROR!
 org.mockito.exceptions.base.MockitoException: 
 
 Mockito cannot mock this class: interface uk.ac.bris.cs.scotlandyard.model.Model$Observer.
@@ -3564,7 +3662,7 @@ Caused by: java.lang.NoSuchMethodError: 'net.bytebuddy.dynamic.loading.MultipleP
 	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:137)
 	... 58 more
 
-testMrXCaptureShouldNotifyGameOverOnce[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@29626d54](uk.ac.bris.cs.scotlandyard.model.ModelObserverTest)  Time elapsed: 0.002 s  <<< ERROR!
+testMrXCaptureShouldNotifyGameOverOnce[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@703580bf](uk.ac.bris.cs.scotlandyard.model.ModelObserverTest)  Time elapsed: 0.001 s  <<< ERROR!
 org.mockito.exceptions.base.MockitoException: 
 
 Mockito cannot mock this class: interface uk.ac.bris.cs.scotlandyard.model.Model$Observer.
@@ -3652,7 +3750,7 @@ Caused by: java.lang.NoSuchMethodError: 'net.bytebuddy.dynamic.loading.MultipleP
 	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:137)
 	... 58 more
 
-testRegisterAndUnregisterMoreThanOneObserver[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@29626d54](uk.ac.bris.cs.scotlandyard.model.ModelObserverTest)  Time elapsed: 0 s  <<< ERROR!
+testRegisterAndUnregisterMoreThanOneObserver[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@703580bf](uk.ac.bris.cs.scotlandyard.model.ModelObserverTest)  Time elapsed: 0 s  <<< ERROR!
 java.lang.RuntimeException: Implement me!
 	at uk.ac.bris.cs.scotlandyard.model.MyModelFactory.build(MyModelFactory.java:19)
 	at uk.ac.bris.cs.scotlandyard.model.MyModelFactory.build(MyModelFactory.java:13)
@@ -3706,7 +3804,7 @@ java.lang.RuntimeException: Implement me!
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testUnregisterNullObserverShouldThrow[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@29626d54](uk.ac.bris.cs.scotlandyard.model.ModelObserverTest)  Time elapsed: 0.001 s  <<< ERROR!
+testUnregisterNullObserverShouldThrow[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@703580bf](uk.ac.bris.cs.scotlandyard.model.ModelObserverTest)  Time elapsed: 0.001 s  <<< ERROR!
 java.lang.Exception: Unexpected exception, expected<java.lang.NullPointerException> but was<java.lang.RuntimeException>
 	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:30)
 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
@@ -3764,7 +3862,7 @@ Caused by: java.lang.RuntimeException: Implement me!
 	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)
 	... 38 more
 
-testRegisterNullObserverShouldThrow[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@29626d54](uk.ac.bris.cs.scotlandyard.model.ModelObserverTest)  Time elapsed: 0.001 s  <<< ERROR!
+testRegisterNullObserverShouldThrow[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@703580bf](uk.ac.bris.cs.scotlandyard.model.ModelObserverTest)  Time elapsed: 0 s  <<< ERROR!
 java.lang.Exception: Unexpected exception, expected<java.lang.NullPointerException> but was<java.lang.RuntimeException>
 	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:30)
 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
@@ -3822,7 +3920,7 @@ Caused by: java.lang.RuntimeException: Implement me!
 	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)
 	... 38 more
 
-testRegisterAndUnregisterObserver[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@29626d54](uk.ac.bris.cs.scotlandyard.model.ModelObserverTest)  Time elapsed: 0.001 s  <<< ERROR!
+testRegisterAndUnregisterObserver[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@703580bf](uk.ac.bris.cs.scotlandyard.model.ModelObserverTest)  Time elapsed: 0.001 s  <<< ERROR!
 java.lang.RuntimeException: Implement me!
 	at uk.ac.bris.cs.scotlandyard.model.MyModelFactory.build(MyModelFactory.java:19)
 	at uk.ac.bris.cs.scotlandyard.model.MyModelFactory.build(MyModelFactory.java:13)
@@ -3876,7 +3974,7 @@ java.lang.RuntimeException: Implement me!
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testOnBoardChangedAfterMoveSelect[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@29626d54](uk.ac.bris.cs.scotlandyard.model.ModelObserverTest)  Time elapsed: 0.001 s  <<< ERROR!
+testOnBoardChangedAfterMoveSelect[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@703580bf](uk.ac.bris.cs.scotlandyard.model.ModelObserverTest)  Time elapsed: 0.001 s  <<< ERROR!
 org.mockito.exceptions.base.MockitoException: 
 
 Mockito cannot mock this class: interface uk.ac.bris.cs.scotlandyard.model.Model$Observer.
@@ -3964,7 +4062,7 @@ Caused by: java.lang.NoSuchMethodError: 'net.bytebuddy.dynamic.loading.MultipleP
 	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:137)
 	... 58 more
 
-testUnregisterIllegalObserverShouldThrow[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@29626d54](uk.ac.bris.cs.scotlandyard.model.ModelObserverTest)  Time elapsed: 0 s  <<< ERROR!
+testUnregisterIllegalObserverShouldThrow[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@703580bf](uk.ac.bris.cs.scotlandyard.model.ModelObserverTest)  Time elapsed: 0.001 s  <<< ERROR!
 java.lang.RuntimeException: Implement me!
 	at uk.ac.bris.cs.scotlandyard.model.MyModelFactory.build(MyModelFactory.java:19)
 	at uk.ac.bris.cs.scotlandyard.model.MyModelFactory.build(MyModelFactory.java:13)
@@ -4018,7 +4116,7 @@ java.lang.RuntimeException: Implement me!
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
 
-testRegisterSameObserverTwiceShouldThrow[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@29626d54](uk.ac.bris.cs.scotlandyard.model.ModelObserverTest)  Time elapsed: 0.001 s  <<< ERROR!
+testRegisterSameObserverTwiceShouldThrow[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@703580bf](uk.ac.bris.cs.scotlandyard.model.ModelObserverTest)  Time elapsed: 0 s  <<< ERROR!
 java.lang.RuntimeException: Implement me!
 	at uk.ac.bris.cs.scotlandyard.model.MyModelFactory.build(MyModelFactory.java:19)
 	at uk.ac.bris.cs.scotlandyard.model.MyModelFactory.build(MyModelFactory.java:13)
