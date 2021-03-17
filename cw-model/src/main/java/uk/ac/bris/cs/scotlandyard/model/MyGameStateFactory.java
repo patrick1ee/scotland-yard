@@ -57,7 +57,7 @@ public final class MyGameStateFactory implements Factory<GameState> {
 			Player player,
 			int source,
 			boolean firstMove) {
-		final var moves = new ArrayList<Move>();
+		List moves = new ArrayList<Move>();
 		for (int destination : setup.graph.adjacentNodes(source)) {
 			boolean occupied = false;
 			for (Player p : detectives) {
@@ -166,7 +166,12 @@ public final class MyGameStateFactory implements Factory<GameState> {
 			if(!this.getAvailableMoves().contains(move)) throw new IllegalArgumentException("Illegal move: "+move);
 
 			Player mrXNew = null;
-			ImmutableList<LogEntry> logNew = ImmutableList.copyOf(log);
+			List<LogEntry> logNew = new ArrayList<LogEntry>();
+
+			for(LogEntry l : log){
+				logNew.add(l);
+			}
+
 			if(move.commencedBy().isMrX()){
 				mrXNew = mrX.use(move.tickets());
 
@@ -187,7 +192,7 @@ public final class MyGameStateFactory implements Factory<GameState> {
 				}
 			}
 
-			return new MyGameState(setup, remaining, logNew, mrXNew, detectivesNew);
+			return new MyGameState(setup, remaining, ImmutableList.copyOf(logNew), mrXNew, detectivesNew);
 		}
 
 		private MyGameState(
