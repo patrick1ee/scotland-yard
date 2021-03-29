@@ -7,6 +7,7 @@
     <list default="true" id="04ec6009-0c56-4883-89fa-704ce7453d31" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/uk/ac/bris/cs/scotlandyard/model/MyGameStateFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/ac/bris/cs/scotlandyard/model/MyGameStateFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/uk/ac/bris/cs/scotlandyard/model/MyGameStateFactory$MyGameState$MyTicketBoard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uk/ac/bris/cs/scotlandyard/model/MyGameStateFactory$MyGameState$MyTicketBoard.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/uk/ac/bris/cs/scotlandyard/model/MyGameStateFactory$MyGameState.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uk/ac/bris/cs/scotlandyard/model/MyGameStateFactory$MyGameState.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/uk/ac/bris/cs/scotlandyard/model/MyGameStateFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uk/ac/bris/cs/scotlandyard/model/MyGameStateFactory.class" afterDir="false" />
     </list>
@@ -75,7 +76,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ModelObserverTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameStateDetectivesAvailableMovesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cw-model" />
       <extension name="coverage">
         <pattern>
@@ -84,7 +85,39 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="uk.ac.bris.cs.scotlandyard.model" />
-      <option name="MAIN_CLASS_NAME" value="uk.ac.bris.cs.scotlandyard.model.ModelObserverTest" />
+      <option name="MAIN_CLASS_NAME" value="uk.ac.bris.cs.scotlandyard.model.GameStateDetectivesAvailableMovesTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameStateDetectivesAvailableMovesTest.testDetectiveMoveOmittedIfAlreadyPlayed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cw-model" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="uk.ac.bris.cs.scotlandyard.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="uk.ac.bris.cs.scotlandyard.model" />
+      <option name="MAIN_CLASS_NAME" value="uk.ac.bris.cs.scotlandyard.model.GameStateDetectivesAvailableMovesTest" />
+      <option name="METHOD_NAME" value="testDetectiveMoveOmittedIfAlreadyPlayed" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="PARAMETERS" value="[uk.ac.bris.cs.scotlandyard.model.MyGameStateFactory@6b9651f3]" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameStateMrXAvailableMovesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cw-model" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="uk.ac.bris.cs.scotlandyard.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="uk.ac.bris.cs.scotlandyard.model" />
+      <option name="MAIN_CLASS_NAME" value="uk.ac.bris.cs.scotlandyard.model.GameStateMrXAvailableMovesTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -93,8 +126,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.AllTest" />
+        <item itemvalue="JUnit.GameStateMrXAvailableMovesTest" />
+        <item itemvalue="JUnit.GameStateDetectivesAvailableMovesTest" />
+        <item itemvalue="JUnit.GameStateDetectivesAvailableMovesTest.testDetectiveMoveOmittedIfAlreadyPlayed" />
         <item itemvalue="JUnit.GameStateCreationTest" />
-        <item itemvalue="JUnit.ModelObserverTest" />
       </list>
     </recent_temporary>
   </component>

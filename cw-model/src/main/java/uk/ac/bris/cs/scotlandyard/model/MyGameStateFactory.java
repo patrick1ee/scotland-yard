@@ -64,6 +64,7 @@ public final class MyGameStateFactory implements Factory<GameState> {
 			Player player,
 			int source
 		){
+		System.out.println(player);
 		List moves = new ArrayList<Move.SingleMove>();
 		for (int destination : setup.graph.adjacentNodes(source)) {
 
@@ -89,15 +90,25 @@ public final class MyGameStateFactory implements Factory<GameState> {
 			Player player,
 			ImmutableSet<Move.SingleMove> singleMoves
 		){
+		List moves = new ArrayList<Move.DoubleMove>();
 		for(Move.SingleMove singleMove : singleMoves){
 			for(int destination: setup.graph.adjacentNodes(singleMove.destination)){
-				/*if(unoccupied(destination, detectives) && player.has()){
+				if(unoccupied(destination, detectives)){
+					for (ScotlandYard.Transport t : setup.graph.edgeValueOrDefault(singleMove.destination, destination, ImmutableSet.of())) {
+						if(player.use(singleMove.ticket).has(t.requiredTicket())){
+							moves.add(new Move.DoubleMove(player.piece(), singleMove.source(), singleMove.ticket, singleMove.destination, t.requiredTicket(), destination));
+						}
 
-				}*/
+					}
+					// TODO consider the rules of secret moves here
+					//  add moves to the destination via a secret ticket if there are any left with the player
+					if(player.use(singleMove.ticket).hasAtLeast(ScotlandYard.Ticket.SECRET, 1))  moves.add(
+							new Move.DoubleMove(player.piece(), singleMove.source(), singleMove.ticket, singleMove.destination, ScotlandYard.Ticket.SECRET, destination));
+				}
 			}
 		}
 
-		return ImmutableSet.of();
+		return ImmutableSet.copyOf(moves);
 	}
 
 	private final class MyGameState implements GameState {
@@ -164,12 +175,16 @@ public final class MyGameStateFactory implements Factory<GameState> {
 		@Override
 		public ImmutableSet<Move> getAvailableMoves() {
 			final var moves = new ArrayList<Move>();
-			for (Player p : detectives) {
-				if(remaining.contains(p.piece())) moves.addAll(getSingleMoves(this.setup, this.detectives, p, p.location()));
-			}
 			if(remaining.contains(mrX.piece())){
-				moves.addAll(getSingleMoves(this.setup, this.detectives, this.mrX, this.mrX.location()));
-				//if(this.mrX.has(ScotlandYard.Ticket.DOUBLE)) moves.addAll(getdoub)
+				ImmutableSet<Move.SingleMove> mrXSingleMoves = getSingleMoves(this.setup, this.detectives, this.mrX, this.mrX.location());
+				moves.addAll(mrXSingleMoves);
+				if(this.mrX.has(ScotlandYard.Ticket.DOUBLE) && setup.rounds.size() - log.size() > 1) {
+					moves.addAll(getDoubleMoves(setup, detectives, mrX, mrXSingleMoves));
+				}
+			} else{
+				for (Player p : detectives) {
+					if(remaining.contains(p.piece())) moves.addAll(getSingleMoves(this.setup, this.detectives, p, p.location()));
+				}
 			}
 			return ImmutableSet.copyOf(moves);
 		}
@@ -232,14 +247,16 @@ public final class MyGameStateFactory implements Factory<GameState> {
 			if (!verifyDetectives(this.detectives)) throw new IllegalArgumentException("Invalid detectives");
 			if (this.mrX.piece().webColour() != "#000")
 				throw new IllegalArgumentException("MrX is not the black piece");
-			if(remaining.isEmpty()){
+
+			
+			/*if(remaining.isEmpty()){
 				Set<Piece> newRemaining = new HashSet<Piece>();
 				for(Player p : detectives){
 					newRemaining.add(p.piece());
 				}
 				newRemaining.add(mrX.piece());
 				this.remaining = ImmutableSet.copyOf(newRemaining);
-			}
+			}*/
 
 		}
 	}
