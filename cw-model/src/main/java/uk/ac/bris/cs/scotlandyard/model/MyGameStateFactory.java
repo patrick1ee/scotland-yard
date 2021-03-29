@@ -17,8 +17,6 @@ import java.util.*;
  */
 public final class MyGameStateFactory implements Factory<GameState> {
 
-	private static final List<Integer> revealRounds = List.of(3, 8, 13, 18, 24);
-
 	private static boolean verifyDetectives(List<Player> detectives){
 		List<Integer> locs = new ArrayList<Integer>();
 		List<Piece> pcs = new ArrayList<Piece>();
@@ -64,7 +62,6 @@ public final class MyGameStateFactory implements Factory<GameState> {
 			Player player,
 			int source
 		){
-		System.out.println(player);
 		List moves = new ArrayList<Move.SingleMove>();
 		for (int destination : setup.graph.adjacentNodes(source)) {
 
@@ -192,6 +189,9 @@ public final class MyGameStateFactory implements Factory<GameState> {
 		@Nonnull
 		@Override
 		public GameState advance(Move move) {
+			System.out.println(move);
+			System.out.println(remaining);
+			System.out.println(this.getAvailableMoves());
 			if(!this.getAvailableMoves().contains(move)) throw new IllegalArgumentException("Illegal move: "+move);
 
 			Player mrXNew = null;
@@ -205,27 +205,30 @@ public final class MyGameStateFactory implements Factory<GameState> {
 				mrXNew = mrX.use(move.tickets());
 
 				for(int dest: getDestinations(move)){
-					if(revealRounds.contains(log.size())) logNew.add(LogEntry.reveal(move.tickets().iterator().next(), dest));
+					if(setup.rounds.get(log.size())) logNew.add(LogEntry.reveal(move.tickets().iterator().next(), dest));
 					else logNew.add(LogEntry.hidden(move.tickets().iterator().next()));
 					mrXNew = mrXNew.at(dest);
 				}
 
 			}
 
-			List<Player> detectivesNew = ImmutableList.copyOf(detectives);
+			List<Player> newDetectives = new ArrayList<Player>();
 
-			for (Player p : detectivesNew) {
+			for (Player p : detectives) {
 				if (p.piece().equals(move.commencedBy())) {
 					p = p.use(move.tickets()).at(getDestinations(move).iterator().next());
+					p = p.at(getDestinations(move).iterator().next());
 					mrXNew = mrX.give(move.tickets());
 				}
+				newDetectives.add(p);
 			}
 			Set<Piece> newRemaining = new HashSet<Piece>();
 			for(Piece p : remaining){
 				if(!p.equals(move.commencedBy())) newRemaining.add(p);
 			}
-
-			return new MyGameState(setup, ImmutableSet.copyOf(newRemaining), ImmutableList.copyOf(logNew), mrXNew, detectivesNew);
+			System.out.println(move);
+			System.out.println(newRemaining);
+			return new MyGameState(setup, ImmutableSet.copyOf(newRemaining), ImmutableList.copyOf(logNew), mrXNew, newDetectives);
 		}
 
 		private MyGameState(
@@ -248,15 +251,14 @@ public final class MyGameStateFactory implements Factory<GameState> {
 			if (this.mrX.piece().webColour() != "#000")
 				throw new IllegalArgumentException("MrX is not the black piece");
 
-			
-			/*if(remaining.isEmpty()){
+			if(remaining.isEmpty()){
 				Set<Piece> newRemaining = new HashSet<Piece>();
+				newRemaining.add(mrX.piece());
 				for(Player p : detectives){
 					newRemaining.add(p.piece());
 				}
-				newRemaining.add(mrX.piece());
 				this.remaining = ImmutableSet.copyOf(newRemaining);
-			}*/
+			}
 
 		}
 	}
