@@ -94,6 +94,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GameStateGameOverTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cw-model" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="uk.ac.bris.cs.scotlandyard.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="uk.ac.bris.cs.scotlandyard.model" />
+      <option name="MAIN_CLASS_NAME" value="uk.ac.bris.cs.scotlandyard.model.GameStateGameOverTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GameStateMrXAvailableMovesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cw-model" />
       <extension name="coverage">
@@ -127,6 +142,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.AllTest" />
+        <item itemvalue="JUnit.GameStateGameOverTest" />
         <item itemvalue="JUnit.GameStateMrXAvailableMovesTest" />
         <item itemvalue="JUnit.GameStateDetectivesAvailableMovesTest" />
         <item itemvalue="JUnit.GameStateDetectivesAvailableMovesTest.testDetectiveMoveOmittedIfAlreadyPlayed" />

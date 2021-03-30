@@ -42,6 +42,14 @@ public final class MyGameStateFactory implements Factory<GameState> {
 		return true;
 	}
 
+	private static ImmutableSet<Piece> getPieces(List<Player> players){
+		Set<Piece> pieces = new HashSet<Piece>();
+		for(Player p : players){
+			pieces.add(p.piece());
+		}
+		return ImmutableSet.copyOf(pieces);
+	}
+
 	public static ImmutableSet<Integer> getDestinations(Move move){
 		return move.visit(new Move.Visitor<ImmutableSet<Integer>>() {
 			@Override
@@ -184,14 +192,13 @@ public final class MyGameStateFactory implements Factory<GameState> {
 				}
 			}
 			return ImmutableSet.copyOf(moves);
+
+
 		}
 
 		@Nonnull
 		@Override
 		public GameState advance(Move move) {
-			System.out.println(move);
-			System.out.println(remaining);
-			System.out.println(this.getAvailableMoves());
 			if(!this.getAvailableMoves().contains(move)) throw new IllegalArgumentException("Illegal move: "+move);
 
 			Player mrXNew = null;
@@ -205,7 +212,7 @@ public final class MyGameStateFactory implements Factory<GameState> {
 				mrXNew = mrX.use(move.tickets());
 
 				for(int dest: getDestinations(move)){
-					if(setup.rounds.get(log.size())) logNew.add(LogEntry.reveal(move.tickets().iterator().next(), dest));
+					if(setup.rounds.get(logNew.size())) logNew.add(LogEntry.reveal(move.tickets().iterator().next(), dest));
 					else logNew.add(LogEntry.hidden(move.tickets().iterator().next()));
 					mrXNew = mrXNew.at(dest);
 				}
@@ -226,8 +233,6 @@ public final class MyGameStateFactory implements Factory<GameState> {
 			for(Piece p : remaining){
 				if(!p.equals(move.commencedBy())) newRemaining.add(p);
 			}
-			System.out.println(move);
-			System.out.println(newRemaining);
 			return new MyGameState(setup, ImmutableSet.copyOf(newRemaining), ImmutableList.copyOf(logNew), mrXNew, newDetectives);
 		}
 
@@ -250,6 +255,27 @@ public final class MyGameStateFactory implements Factory<GameState> {
 			if (!verifyDetectives(this.detectives)) throw new IllegalArgumentException("Invalid detectives");
 			if (this.mrX.piece().webColour() != "#000")
 				throw new IllegalArgumentException("MrX is not the black piece");
+
+
+			if(winner.isEmpty()){
+				if(log.size() == setup.rounds.size() && remaining.isEmpty()) winner = ImmutableSet.of(mrX.piece());
+				else if(getSingleMoves(this.setup, this.detectives, mrX, mrX.location()).isEmpty() && remaining.isEmpty()){
+					winner = ImmutableSet.copyOf(getPieces(detectives));
+				}
+				else{
+					boolean detectivesCannotMove = true;
+					for(Player p : detectives) {
+						if (p.location() == mrX.location()) {
+							winner = getPieces(detectives);
+							detectivesCannotMove = false;
+							break;
+						}
+						if(getSingleMoves(this.setup, this.detectives, p, p.location()).size() > 0) detectivesCannotMove = false;
+					}
+
+					if(detectivesCannotMove) winner = ImmutableSet.of(mrX.piece());
+				}
+			}
 
 			if(remaining.isEmpty()){
 				Set<Piece> newRemaining = new HashSet<Piece>();
