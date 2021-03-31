@@ -89,6 +89,15 @@ public final class MyGameStateFactory implements Factory<GameState> {
 		return newPlayer;
 	}
 
+	private static ImmutableSet<Piece> fillRemaining(ImmutableSet<Piece> remaining, Player mrX, List<Player> detectives){
+		Set<Piece> newRemaining = new HashSet<Piece>();
+		newRemaining.add(mrX.piece());
+		for(Player p : detectives){
+			newRemaining.add(p.piece());
+		}
+		return ImmutableSet.copyOf(newRemaining);
+	}
+
 	private static boolean cannotMove(List<Player> players, List<Player>detectives, GameSetup setup){
 		for(Player p : players){
 			if(!getSingleMoves(setup, detectives, p, p.location()).isEmpty()) return false;
@@ -279,14 +288,7 @@ public final class MyGameStateFactory implements Factory<GameState> {
 			if (this.mrX.piece().webColour() != "#000")
 				throw new IllegalArgumentException("MrX is not the black piece");
 
-			if(this.remaining.isEmpty()){
-				Set<Piece> newRemaining = new HashSet<Piece>();
-				newRemaining.add(mrX.piece());
-				for(Player p : detectives){
-					newRemaining.add(p.piece());
-				}
-				this.remaining = ImmutableSet.copyOf(newRemaining);
-			}
+			if(this.remaining.isEmpty()) this.remaining = fillRemaining(this.remaining, this.mrX, this.detectives);
 
 			if(!remaining.contains(mrX.piece()) && getSingleMoves(this.setup, this.detectives, mrX, mrX.location()).isEmpty()){
 				winner = ImmutableSet.copyOf(getPieces(detectives));
@@ -318,12 +320,7 @@ public final class MyGameStateFactory implements Factory<GameState> {
 
 
 			if(!this.remaining.isEmpty() && getAvailableMoves().isEmpty() && !remaining.contains(mrX.piece())){
-				Set<Piece> newRemaining = new HashSet<Piece>();
-				for(Player p : detectives){
-					newRemaining.add(p.piece());
-				}
-				newRemaining.add(mrX.piece());
-				this.remaining = ImmutableSet.copyOf(newRemaining);
+				this.remaining = fillRemaining(this.remaining, this.mrX, this.detectives);
 			}
 
 

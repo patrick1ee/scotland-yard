@@ -28,6 +28,7 @@ public final class MyModelFactory implements Factory<Model> {
 
 		@Override
 		public void registerObserver(@Nonnull Observer observer) {
+			if(observer.equals(null)) throw new NullPointerException();
 			if(observers.contains(observer)) throw new IllegalArgumentException("Cannot register observer more than once");
 			Set<Observer> observersNew = new HashSet<Observer>();
 			observersNew.addAll(observers);
@@ -37,6 +38,7 @@ public final class MyModelFactory implements Factory<Model> {
 
 		@Override
 		public void unregisterObserver(@Nonnull Observer observer) {
+			if(observer.equals(null)) throw new NullPointerException();
 			if(!observers.contains(observer)) throw new IllegalArgumentException("Cannot unregister an observer which has not seen previously registered");
 			Set<Observer> observersNew = new HashSet<Observer>();
 			observersNew.addAll(observers);
