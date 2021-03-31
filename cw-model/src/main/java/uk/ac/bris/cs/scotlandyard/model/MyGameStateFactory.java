@@ -213,7 +213,6 @@ public final class MyGameStateFactory implements Factory<GameState> {
 		public ImmutableSet<Move> getAvailableMoves() {
 			final var moves = new ArrayList<Move>();
 			if(remaining.contains(mrX.piece())){
-				System.out.println("t");
 				ImmutableSet<Move.SingleMove> mrXSingleMoves = getSingleMoves(this.setup, this.detectives, this.mrX, this.mrX.location());
 				moves.addAll(mrXSingleMoves);
 				if(this.mrX.has(ScotlandYard.Ticket.DOUBLE) && setup.rounds.size() - log.size() > 1) {
@@ -280,10 +279,6 @@ public final class MyGameStateFactory implements Factory<GameState> {
 			if (this.mrX.piece().webColour() != "#000")
 				throw new IllegalArgumentException("MrX is not the black piece");
 
-			System.out.println("");
-			System.out.println(remaining);
-			System.out.println(getSingleMoves(this.setup, this.detectives, mrX, mrX.location()));
-
 			if(this.remaining.isEmpty()){
 				Set<Piece> newRemaining = new HashSet<Piece>();
 				newRemaining.add(mrX.piece());
@@ -295,7 +290,7 @@ public final class MyGameStateFactory implements Factory<GameState> {
 
 			if(!remaining.contains(mrX.piece()) && getSingleMoves(this.setup, this.detectives, mrX, mrX.location()).isEmpty()){
 				winner = ImmutableSet.copyOf(getPieces(detectives));
-				//this.remaining = ImmutableSet.of();
+
 			} else if(cannotMove(detectives, detectives, setup)){
 				winner = ImmutableSet.of(mrX.piece());
 				this.remaining = ImmutableSet.of();
@@ -331,10 +326,6 @@ public final class MyGameStateFactory implements Factory<GameState> {
 				this.remaining = ImmutableSet.copyOf(newRemaining);
 			}
 
-
-			System.out.println("W " + winner);
-			System.out.println(this.remaining);
-			System.out.println(getAvailableMoves());
 
 		}
 	}
