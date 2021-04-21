@@ -54,6 +54,14 @@ public final class MyModelFactory implements Factory<Model> {
 		@Override
 		public void chooseMove(@Nonnull Move move) {
 			this.game = this.game.advance(move);
+			Observer.Event e;
+
+			if(this.game.getWinner().isEmpty()) e = Observer.Event.MOVE_MADE;
+			else e = Observer.Event.GAME_OVER;
+
+			for(Observer o : this.observers){
+				o.onModelChanged(this.game, e);
+			}
 		}
 
 		public MyModel(Board.GameState game){

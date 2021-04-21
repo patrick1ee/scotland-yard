@@ -8,7 +8,7 @@ import org.junit.runners.Suite;
  */
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
-		GameStateCreationTest.class, //3
+		GameStateCreationTest.class,
 		GameStateGameOverTest.class,
 		GameStateRoundTest.class,
 		GameStatePlayerTest.class,
