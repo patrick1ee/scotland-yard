@@ -7,7 +7,9 @@ import javax.annotation.Nonnull;
 import com.google.common.collect.ImmutableSet;
 import uk.ac.bris.cs.scotlandyard.model.ScotlandYard.Factory;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -16,49 +18,47 @@ import java.util.Set;
  */
 public final class MyModelFactory implements Factory<Model> {
 
+	private MyGameStateFactory gameStateFactory = new MyGameStateFactory();
+
 	private final class MyModel implements Model {
 
-		private ImmutableSet<Observer> observers;
+		private List<Observer> observers;
+		private Board.GameState game;
 
 		@Nonnull
 		@Override
 		public Board getCurrentBoard() {
-			return null;
+			return this.game;
 		}
 
 		@Override
 		public void registerObserver(@Nonnull Observer observer) {
 			if(observer.equals(null)) throw new NullPointerException();
 			if(observers.contains(observer)) throw new IllegalArgumentException("Cannot register observer more than once");
-			Set<Observer> observersNew = new HashSet<Observer>();
-			observersNew.addAll(observers);
-			observersNew.add(observer);
-			observers = ImmutableSet.copyOf(observersNew);
+			this.observers.add(observer);
 		}
 
 		@Override
 		public void unregisterObserver(@Nonnull Observer observer) {
 			if(observer.equals(null)) throw new NullPointerException();
 			if(!observers.contains(observer)) throw new IllegalArgumentException("Cannot unregister an observer which has not seen previously registered");
-			Set<Observer> observersNew = new HashSet<Observer>();
-			observersNew.addAll(observers);
-			observersNew.remove(observer);
-			observers = ImmutableSet.copyOf(observersNew);
+			this.observers.remove(observer);
 		}
 
 		@Nonnull
 		@Override
 		public ImmutableSet<Observer> getObservers() {
-			return this.observers;
+			return ImmutableSet.copyOf(this.observers);
 		}
 
 		@Override
 		public void chooseMove(@Nonnull Move move) {
-
+			this.game = this.game.advance(move);
 		}
 
-		public MyModel(){
-			this.observers = ImmutableSet.of();
+		public MyModel(Board.GameState game){
+			this.observers = new ArrayList<Observer>();
+			this.game = game;
 		}
 	}
 	@Nonnull
@@ -67,6 +67,6 @@ public final class MyModelFactory implements Factory<Model> {
 					   Player mrX,
 					   ImmutableList<Player> detectives) {
 
-		return new MyModel();
+		return new MyModel(gameStateFactory.build(setup, mrX, detectives));
 	}
 }
