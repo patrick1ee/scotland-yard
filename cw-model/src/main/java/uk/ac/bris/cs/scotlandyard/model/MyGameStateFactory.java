@@ -18,6 +18,11 @@ import java.util.*;
  */
 public final class MyGameStateFactory implements Factory<GameState> {
 
+	/**
+	 *
+	 * @param detectives
+	 * @return boolean verifying that detectives all have correct properties
+	 */
 	private static boolean verifyDetectives(List<Player> detectives){
 		List<Integer> locs = new ArrayList<Integer>();
 		List<Piece> pcs = new ArrayList<Piece>();
@@ -36,6 +41,11 @@ public final class MyGameStateFactory implements Factory<GameState> {
 
 	}
 
+	/**
+	 * @param location
+	 * @param detectives
+	 * @return boolean verifying if a particular location is unoccupied by a detective
+	 */
 	private static boolean unoccupied(int location, List<Player> detectives){
 		for(Player p : detectives){
 			if(p.location() == location) return false;
@@ -43,6 +53,11 @@ public final class MyGameStateFactory implements Factory<GameState> {
 		return true;
 	}
 
+	/**
+	 *
+	 * @param players
+	 * @return Immutable Set of pieces which correspond to a given list of players
+	 */
 	private static ImmutableSet<Piece> getPieces(List<Player> players){
 		Set<Piece> pieces = new HashSet<Piece>();
 		for(Player p : players){
@@ -51,6 +66,11 @@ public final class MyGameStateFactory implements Factory<GameState> {
 		return ImmutableSet.copyOf(pieces);
 	}
 
+	/**
+	 *
+	 * @param move
+	 * @return Uses visitor to pattern to get all destinatotions reached in a given move
+	 */
 	private static ImmutableSet<Integer> getDestinations(Move move){
 		return move.visit(new Move.Visitor<ImmutableSet<Integer>>() {
 			@Override
@@ -65,6 +85,13 @@ public final class MyGameStateFactory implements Factory<GameState> {
 		});
 	}
 
+	/**
+	 *
+	 * @param log
+	 * @param setup
+	 * @param move
+	 * @return Log updated after mrX move
+	 */
 	private static ImmutableList<LogEntry> updateLog(ImmutableList<LogEntry> log, GameSetup setup, Move move){
 		List<LogEntry> logNew = new ArrayList<LogEntry>();
 
@@ -81,6 +108,12 @@ public final class MyGameStateFactory implements Factory<GameState> {
 
 	}
 
+	/**
+	 *
+	 * @param player
+	 * @param move
+	 * @return Player updated after given move
+	 */
 	private static Player updatePlayer(Player player, Move move){
 		Player newPlayer = player.use(move.tickets());
 		for(int dest : getDestinations(move)){
@@ -89,6 +122,13 @@ public final class MyGameStateFactory implements Factory<GameState> {
 		return newPlayer;
 	}
 
+	/**
+	 *
+	 * @param remaining
+	 * @param mrX
+	 * @param detectives
+	 * @return Remaining players list populated with all players in the game
+	 */
 	private static ImmutableSet<Piece> fillRemaining(ImmutableSet<Piece> remaining, Player mrX, List<Player> detectives){
 		Set<Piece> newRemaining = new HashSet<Piece>();
 		newRemaining.add(mrX.piece());
@@ -98,6 +138,13 @@ public final class MyGameStateFactory implements Factory<GameState> {
 		return ImmutableSet.copyOf(newRemaining);
 	}
 
+	/**
+	 *
+	 * @param players
+	 * @param detectives
+	 * @param setup
+	 * @return boolean verifying that a player cannot move from their current location
+	 */
 	private static boolean cannotMove(List<Player> players, List<Player>detectives, GameSetup setup){
 		for(Player p : players){
 			if(!getSingleMoves(setup, detectives, p, p.location()).isEmpty()) return false;
@@ -105,6 +152,14 @@ public final class MyGameStateFactory implements Factory<GameState> {
 		return true;
 	}
 
+	/**
+	 *
+	 * @param setup
+	 * @param detectives
+	 * @param player
+	 * @param source
+	 * @return Returns set of all possible single moves a player can make
+	 */
 	private static ImmutableSet<Move.SingleMove> getSingleMoves(
 			GameSetup setup,
 			List<Player> detectives,
@@ -130,6 +185,14 @@ public final class MyGameStateFactory implements Factory<GameState> {
 		return ImmutableSet.copyOf(moves);
 	}
 
+	/**
+	 *
+	 * @param setup
+	 * @param detectives
+	 * @param player
+	 * @param singleMoves
+	 * @return set of all possible double moves a player can make
+	 */
 	private static ImmutableSet<Move.DoubleMove> getDoubleMoves(
 			GameSetup setup,
 			List<Player> detectives,
@@ -159,6 +222,9 @@ public final class MyGameStateFactory implements Factory<GameState> {
 
 	private final class MyGameState implements GameState {
 
+		/**
+		 * Ticket board containing the tickets in play on the game board
+		 */
 		private final class MyTicketBoard implements TicketBoard {
 
 			private final ImmutableMap<ScotlandYard.Ticket, Integer> tickets;
