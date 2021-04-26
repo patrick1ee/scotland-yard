@@ -8,21 +8,18 @@ import com.google.common.collect.ImmutableSet;
 import uk.ac.bris.cs.scotlandyard.model.ScotlandYard.Factory;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
-/**
- * cw-model
- * Stage 2: Complete this class
- */
 public final class MyModelFactory implements Factory<Model> {
 
 	private MyGameStateFactory gameStateFactory = new MyGameStateFactory();
 
 	private final class MyModel implements Model {
 
+		/** List of registered observers */
 		private List<Observer> observers;
+
+		/** Current Game Board */
 		private Board.GameState game;
 
 		@Nonnull
@@ -50,6 +47,10 @@ public final class MyModelFactory implements Factory<Model> {
 		public ImmutableSet<Observer> getObservers() {
 			return ImmutableSet.copyOf(this.observers);
 		}
+
+		/**
+		 * @param move delegates the move to the underlying game board and notifies all players of the event
+		 */
 
 		@Override
 		public void chooseMove(@Nonnull Move move) {
