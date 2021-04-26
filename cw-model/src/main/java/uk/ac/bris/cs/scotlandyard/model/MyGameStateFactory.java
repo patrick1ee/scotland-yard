@@ -110,7 +110,7 @@ public final class MyGameStateFactory implements Factory<GameState> {
 			List<Player> detectives,
 			Player player,
 			int source
-		){
+	){
 		List moves = new ArrayList<Move.SingleMove>();
 		for (int destination : setup.graph.adjacentNodes(source)) {
 
@@ -135,7 +135,7 @@ public final class MyGameStateFactory implements Factory<GameState> {
 			List<Player> detectives,
 			Player player,
 			ImmutableSet<Move.SingleMove> singleMoves
-		){
+	){
 		List moves = new ArrayList<Move.DoubleMove>();
 		for(Move.SingleMove singleMove : singleMoves){
 			for(int destination: setup.graph.adjacentNodes(singleMove.destination)){
@@ -339,7 +339,7 @@ public final class MyGameStateFactory implements Factory<GameState> {
 		for(Player p : detectives){
 			s.add(p.piece());
 		}
-			return new MyGameState(setup, ImmutableSet.copyOf(s), ImmutableList.of(), mrX, detectives);
+		return new MyGameState(setup, ImmutableSet.copyOf(s), ImmutableList.of(), mrX, detectives);
 
 	}
 }
