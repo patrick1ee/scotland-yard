@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0a2316d-adf9-441c-b252-ce4ca91e8ee7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/uk/ac/bris/cs/scotlandyard/model/MyGameStateFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/ac/bris/cs/scotlandyard/model/MyGameStateFactory.java" afterDir="false" />
-    </list>
+    <list default="true" id="b0a2316d-adf9-441c-b252-ce4ca91e8ee7" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
