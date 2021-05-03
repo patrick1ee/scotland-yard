@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0a2316d-adf9-441c-b252-ce4ca91e8ee7" name="Default Changelist" comment="" />
+    <list default="true" id="b0a2316d-adf9-441c-b252-ce4ca91e8ee7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../cw-ai/src/main/java/uk/ac/bris/cs/scotlandyard/ui/ai/Search.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cw-ai/src/main/java/uk/ac/bris/cs/scotlandyard/ui/ai/MyAi.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cw-ai/src/main/java/uk/ac/bris/cs/scotlandyard/ui/ai/MyAi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uk/ac/bris/cs/scotlandyard/model/MyGameStateFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/ac/bris/cs/scotlandyard/model/MyGameStateFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/uk/ac/bris/cs/scotlandyard/model/MyGameStateFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uk/ac/bris/cs/scotlandyard/model/MyGameStateFactory$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/uk/ac/bris/cs/scotlandyard/model/MyGameStateFactory$MyGameState$MyTicketBoard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uk/ac/bris/cs/scotlandyard/model/MyGameStateFactory$MyGameState$MyTicketBoard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/uk/ac/bris/cs/scotlandyard/model/MyGameStateFactory$MyGameState.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uk/ac/bris/cs/scotlandyard/model/MyGameStateFactory$MyGameState.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/uk/ac/bris/cs/scotlandyard/model/MyGameStateFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uk/ac/bris/cs/scotlandyard/model/MyGameStateFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/uk/ac/bris/cs/scotlandyard/model/MyModelFactory$MyModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uk/ac/bris/cs/scotlandyard/model/MyModelFactory$MyModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/uk/ac/bris/cs/scotlandyard/model/MyModelFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/uk/ac/bris/cs/scotlandyard/model/MyModelFactory.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,8 +33,22 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.AllTest">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="uk.ac.bris.cs.scotlandyard.Main" />
+      <module name="cw-model" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="uk.ac.bris.cs.scotlandyard.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AllTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cw-model" />
       <extension name="coverage">
@@ -42,6 +67,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.AllTest" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -66,5 +92,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

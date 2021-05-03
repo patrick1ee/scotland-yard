@@ -6,16 +6,12 @@ import javax.annotation.Nonnull;
 
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
-import com.google.common.primitives.ImmutableDoubleArray;
 import uk.ac.bris.cs.scotlandyard.model.Board.GameState;
 import uk.ac.bris.cs.scotlandyard.model.ScotlandYard.Factory;
 
 import java.util.*;
 
-/**
- * cw-model
- * Stage 1: Complete this class
- */
+
 public final class MyGameStateFactory implements Factory<GameState> {
 
 	/**
@@ -69,7 +65,9 @@ public final class MyGameStateFactory implements Factory<GameState> {
 	/**
 	 *
 	 * @param move
-	 * @return Uses visitor to pattern to get all destinatotions reached in a given move
+	 * @return Uses double dispatch to pattern to get all destinatotions reached in a given move
+	 *
+	 * VISITOR PATTERN
 	 */
 	private static ImmutableSet<Integer> getDestinations(Move move){
 		return move.visit(new Move.Visitor<ImmutableSet<Integer>>() {
@@ -84,7 +82,6 @@ public final class MyGameStateFactory implements Factory<GameState> {
 			}
 		});
 	}
-
 	/**
 	 *
 	 * @param log
@@ -176,8 +173,6 @@ public final class MyGameStateFactory implements Factory<GameState> {
 					}
 
 				}
-				// TODO consider the rules of secret moves here
-				//  add moves to the destination via a secret ticket if there are any left with the player
 				if(player.hasAtLeast(ScotlandYard.Ticket.SECRET, 1))  moves.add(
 						new Move.SingleMove(player.piece(), source, ScotlandYard.Ticket.SECRET, destination));
 			}
@@ -209,8 +204,6 @@ public final class MyGameStateFactory implements Factory<GameState> {
 						}
 
 					}
-					// TODO consider the rules of secret moves here
-					//  add moves to the destination via a secret ticket if there are any left with the player
 					if(player.use(singleMove.ticket).hasAtLeast(ScotlandYard.Ticket.SECRET, 1))  moves.add(
 							new Move.DoubleMove(player.piece(), singleMove.source(), singleMove.ticket, singleMove.destination, ScotlandYard.Ticket.SECRET, destination));
 				}
@@ -309,6 +302,7 @@ public final class MyGameStateFactory implements Factory<GameState> {
 			if(!this.getAvailableMoves().contains(move)) throw new IllegalArgumentException("Illegal move: "+move);
 
 			Set<Piece> newRemaining = new HashSet<Piece>();
+			List<Player> newDetectives = new ArrayList<Player>();
 
 			if(move.commencedBy() == mrX.piece()){
 				log = updateLog(log, setup, move);
@@ -317,8 +311,6 @@ public final class MyGameStateFactory implements Factory<GameState> {
 			else if(remaining.contains(mrX.piece())){
 				newRemaining.add(mrX.piece());
 			}
-
-			List<Player> newDetectives = new ArrayList<Player>();
 
 			for (Player p : detectives) {
 				if (p.piece().equals(move.commencedBy())) {
