@@ -14,8 +14,10 @@ public class MyAi implements Ai {
 
 	private static final double correction = 2;
 	private static final double discount = 0.9;
-	private static final int depth = 5;
-	private static final double breadth = 1.0;
+	private static final int depth = 1;
+	private static final int maxDepth = 10;
+
+	private Dictionary<Object, Optional<Double>> table;
 
 	private static int moveCost(Move move){
 		int cost = 0;
@@ -77,13 +79,13 @@ public class MyAi implements Ai {
 		if(board.getWinner().contains(Piece.MrX.MRX)) return 100;
 		else if(board.getWinner().isEmpty()) {
 			var moves = board.getAvailableMoves().asList();
-			if(mrX) return correction * Search.getAverageDistanceFromDetectives(board, location, Search.getDetectiveLocations(board)) * moves.size();
-			else return (correction / Search.getAverageDistanceFromDetectives(board, location, Search.getDetectiveLocations(board))) / moves.size();
+			if(mrX) return correction * (Search.getAverageDistanceFromDetectives(board, location, Search.getDetectiveLocations(board)) + moves.size());
+			else return correction * (Search.getAverageDistanceFromDetectives(board, location, Search.getDetectiveLocations(board)) - moves.size());
 		}
-		else return 0;
+		else return -100;
 	}
 
-	private static double minimax(Board board, int depth, double alpha, double beta, int location){
+	private Pair<Boolean, Double> minimax(Board board, int depth, double alpha, double beta, int location, Pair<Long, Long> timeout){
 
 		var moves = board.getAvailableMoves().asList();
 		moves = filterMoves(moves);
@@ -93,13 +95,21 @@ public class MyAi implements Ai {
 		moves = ImmutableList.copyOf(movesArray);
 
 		boolean maximizingMrX = moves.stream().anyMatch(move -> move.commencedBy().isMrX());
-		if(depth == 0 || !board.getWinner().isEmpty()) return score(board, location, maximizingMrX);
+		if(depth == 0 || !board.getWinner().isEmpty()) return Pair.pair(false, score(board, location, maximizingMrX));
 		if(maximizingMrX){
 			//System.out.println("x");
 			double maxEval = -1000;
-			for(Move move : moves.subList(0, (int)Math.floor(moves.size() * breadth))){
-				double eval = /**getAverageDistanceFromDetectives(board, location) +*/
-						discount * minimax(((Board.GameState)board).advance(move), depth - 1, alpha, beta, getMoveDestination(move));
+			for(Move move : moves){
+				if(System.currentTimeMillis() - timeout.left() >= (0.9 * timeout.right() * 1000)) return Pair.pair(true, maxEval);
+				Board nextState = ((Board.GameState)board).advance(move);
+				Optional<Double> score = this.table.get(nextState);
+				double eval;
+				if(score.isEmpty()){
+					eval = discount * minimax(((Board.GameState)board).advance(move), depth - 1, alpha, beta, getMoveDestination(move), timeout).right();
+				}
+				else{
+					eval = score.get();
+				}
 				if(eval >= alpha) alpha = eval;
 				if(beta <= alpha){
 					System.out.println("prune");
@@ -107,14 +117,14 @@ public class MyAi implements Ai {
 				}
 				if(eval > maxEval) maxEval = eval;
 			}
-			return maxEval;
+			return Pair.pair(false, maxEval + score(board, location, true));
 
 		} else{
 			//System.out.println("d");
 			double minEval = 1000;
-			for(Move move : moves.subList(0, (int)Math.floor(moves.size() * breadth))){
-				double eval = /**getAverageDistanceFromDetectives(board, location) +*/
-						discount * minimax(((Board.GameState)board).advance(move), depth - 1, alpha, beta, location);
+			for(Move move : moves){
+				if(System.currentTimeMillis() - timeout.left() >= (0.9 * timeout.right() * 1000)) return Pair.pair(true, minEval);
+				double eval = discount * minimax(((Board.GameState)board).advance(move), depth - 1, alpha, beta, location, timeout).right();
 				if(eval <= beta) beta = eval;
 				if(beta <= alpha){
 					System.out.println("prune");
@@ -122,33 +132,54 @@ public class MyAi implements Ai {
 				}
 				if(eval < minEval) minEval = eval;
 			}
-			return minEval;
+			return Pair.pair(true, minEval + score(board, location, false));
 		}
 	}
 
 	@Nonnull @Override public String name() { return "Name me!"; }
 
+	public void onStart(){
+		this.table = new Hashtable<>();
+	}
+
 	@Nonnull @Override public Move pickMove(
 			@Nonnull Board board,
 			Pair<Long, TimeUnit> timeoutPair) {
-		// returns a random move, replace with your own implementation
+
+		long start = System.currentTimeMillis();
 		var moves = board.getAvailableMoves().asList();
 		moves = filterMoves(moves);
 		Move[] movesArray = new Move[moves.size()];
 		moves.toArray(movesArray);
 		movesArray = Search.mergeSort(board, movesArray);
 		moves = ImmutableList.copyOf(movesArray);
+
+		Board b = (((Board.GameState)board).advance(moves.get(0)));
+
 		double max = Double.NEGATIVE_INFINITY;
 		Move maxMove = null;
-		//System.out.println(moves);
-		int limit = (int)Math.floor(moves.size() * breadth);
-		if(limit == 0) limit = 1;
-		for(Move move : moves.subList(0, limit)){
-			double score = minimax(((Board.GameState)board).advance(move), depth, Double.NEGATIVE_INFINITY, Double.POSITIVE_INFINITY, getMoveDestination(move));
-			System.out.println(score);
-			if(score > max){
-				max = score;
-				maxMove = move;
+		System.out.println(timeoutPair);
+		for(int i = 0; i < maxDepth; i++){
+			if(System.currentTimeMillis() - start >= (0.9 * timeoutPair.left() * 1000)) break;
+			double subMax = Double.NEGATIVE_INFINITY;
+			Move subMaxMove = null;
+			for(Move move : moves){
+				if(System.currentTimeMillis() - start >= (0.9 * timeoutPair.left() * 1000)) break;
+				Pair<Boolean, Double> scorePair = minimax(((Board.GameState)board).advance(move), i, Double.NEGATIVE_INFINITY, Double.POSITIVE_INFINITY, getMoveDestination(move), Pair.pair(start, timeoutPair.left()));
+				if(scorePair.left()){
+					i = maxDepth;
+					break;
+				}
+				double score = scorePair.right();
+				System.out.println(score);
+				if(score > subMax){
+					subMax = score;
+					subMaxMove = move;
+				}
+			}
+			if(subMax > max){
+				max = subMax;
+				maxMove = subMaxMove;
 			}
 		}
 		System.out.println(maxMove);

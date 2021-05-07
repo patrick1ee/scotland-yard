@@ -127,8 +127,8 @@ public class Search {
                 lcount += 1;
             } else{
                 boolean MrX = board.getAvailableMoves().stream().anyMatch(move -> move.commencedBy().isMrX());
-                double lScore = MyAi.score(board, MyAi.getMoveDestination(left[lcount]), MrX);
-                double rScore = MyAi.score(board, MyAi.getMoveDestination(right[rcount]), MrX);
+                double lScore = MyAi.score(((Board.GameState)board).advance(left[lcount]), MyAi.getMoveDestination(left[lcount]), MrX);
+                double rScore = MyAi.score(((Board.GameState)board).advance(right[rcount]), MyAi.getMoveDestination(right[rcount]), MrX);
                 if(MrX){
                     if(lScore >= rScore){
                         sorted[lcount + rcount] = left[lcount];
