@@ -26,17 +26,17 @@ public class Search {
         return key;
     }
 
-    static ImmutableList<Integer> getDetectiveLocations(Board board){
+    static List<Integer> getDetectiveLocations(Board board){
         List<Integer> detectiveLocations = new ArrayList<>();
         for(Piece p : board.getPlayers()){
             if(p.isDetective()){
                 detectiveLocations.add(board.getDetectiveLocation((Piece.Detective)p).get());
             }
         }
-        return ImmutableList.copyOf(detectiveLocations);
+        return detectiveLocations;
     }
 
-    static double getAverageDistanceFromDetectives(Board board, int location, ImmutableList<Integer> locations){
+    static double getAverageDistanceFromDetectives(Board board, int location, List<Integer> locations){
         List<Integer> distances = shortestDistances(board.getSetup().graph, location, locations);
         int tot = 0;
         for(int d : distances){
@@ -93,7 +93,7 @@ public class Search {
     static List<Integer> shortestDistances(
             ImmutableValueGraph<Integer, ImmutableSet<ScotlandYard.Transport>> graph,
             Integer source,
-            ImmutableList<Integer> destinations){
+            List<Integer> destinations){
 
         Set<Integer> nodes = new HashSet<>(graph.nodes());
         Dictionary<Integer, Integer> d = new Hashtable<Integer, Integer>();
@@ -115,49 +115,5 @@ public class Search {
         return distances;
     }
 
-    static Move[] Merge(Board board, Move[] left, Move[] right){
-        Move[] sorted = new Move[left.length + right.length];
-        int lcount = 0, rcount = 0;
-        while(lcount + rcount < sorted.length){
-            if(lcount >= left.length){
-                sorted[lcount + rcount] = right[rcount];
-                rcount += 1;
-            } else if (rcount >= right.length){
-                sorted[lcount + rcount] = left[lcount];
-                lcount += 1;
-            } else{
-                boolean MrX = board.getAvailableMoves().stream().anyMatch(move -> move.commencedBy().isMrX());
-                double lScore = MyAi.score(((Board.GameState)board).advance(left[lcount]), MyAi.getMoveDestination(left[lcount]), MrX);
-                double rScore = MyAi.score(((Board.GameState)board).advance(right[rcount]), MyAi.getMoveDestination(right[rcount]), MrX);
-                if(MrX){
-                    if(lScore >= rScore){
-                        sorted[lcount + rcount] = left[lcount];
-                        lcount += 1;
-                    } else{
-                        sorted[lcount + rcount] = right[rcount];
-                        rcount += 1;
-                    }
-                } else{
-                    if(lScore <= rScore){
-                        sorted[lcount + rcount] = left[lcount];
-                        lcount += 1;
-                    } else{
-                        sorted[lcount + rcount] = right[rcount];
-                        rcount += 1;
-                    }
-                }
 
-            }
-
-        }
-        return sorted;
-    }
-   static Move[] mergeSort(Board board, Move[] moves){
-        if(moves.length < 2) return moves;
-
-        Move[] left = mergeSort(board, Arrays.copyOfRange(moves, 0, (int) Math.floor(moves.length / 2)));
-        Move[] right = mergeSort(board, Arrays.copyOfRange(moves, (int) Math.floor(moves.length / 2), moves.length));
-
-        return Merge(board, left, right);
-    }
 }
