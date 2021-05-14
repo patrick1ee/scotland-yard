@@ -6,10 +6,21 @@ import uk.ac.bris.cs.scotlandyard.model.ScotlandYard;
 
 import java.util.*;
 
+/**
+ * Iterable data structure, contains the set of available actions to the AI, automatically sorted based on
+ * heuristic representing likelihood of a good score
+ */
+
 public class ActionSet implements Iterable<Action>{
 
     protected Action[] actions;
 
+    /**
+     * @param maximizing
+     * @param left
+     * @param right
+     * @return Sorted array of actions (order depending on whether maximizing MrX or detectives
+     */
     private Action[] Merge(boolean maximizing, Action[] left, Action[] right){
         Action[] sorted = new Action[left.length + right.length];
         int lcount = 0, rcount = 0;
@@ -53,6 +64,10 @@ public class ActionSet implements Iterable<Action>{
         return Merge(maximizing, left, right);
     }
 
+    /**
+     * @param move
+     * @return cost of move calculated based on in-game frequency of tickets
+     */
     private int moveCost(Move move){
         int cost = 0;
         for(ScotlandYard.Ticket t : move.tickets()){
@@ -67,6 +82,10 @@ public class ActionSet implements Iterable<Action>{
         return cost;
     }
 
+    /**
+     * Visitor pattern
+     * @return destination of a given move (single or double)
+     */
     public static int getDestination(Move move){
         return move.visit(new Move.Visitor<Integer>() {
             @Override
@@ -81,6 +100,10 @@ public class ActionSet implements Iterable<Action>{
         });
     }
 
+    /**
+     * @param moves
+     * @return list of moves containing specific one move per destination
+     */
     private  ImmutableList<Move> filterMoves(ImmutableList<Move> moves){
         if(moves.size() == 0) return ImmutableList.of();//throw new IllegalArgumentException("Moves array cannot be empty!");
         Dictionary<Integer, Integer> dict = new Hashtable<Integer, Integer>();
@@ -107,6 +130,9 @@ public class ActionSet implements Iterable<Action>{
         return ImmutableList.copyOf(filtered);
     }
 
+    /**
+     * @return iterator for this set of actions
+     */
     @Override
     public Iterator<Action> iterator() {
         return new Iterator<Action>() {

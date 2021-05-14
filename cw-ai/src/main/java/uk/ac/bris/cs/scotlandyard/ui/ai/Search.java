@@ -11,6 +11,9 @@ import uk.ac.bris.cs.scotlandyard.model.ScotlandYard;
 
 import java.util.*;
 
+/**
+ * Utility class for path finding within graph
+ */
 public class Search {
 
 

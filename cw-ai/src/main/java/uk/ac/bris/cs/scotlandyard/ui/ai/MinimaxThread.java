@@ -2,10 +2,11 @@ package uk.ac.bris.cs.scotlandyard.ui.ai;
 
 import io.atlassian.fugue.Pair;
 
-import java.util.Dictionary;
-import java.util.Hashtable;
-import java.util.Optional;
+import java.util.*;
 
+/**
+ * Thread designed for minimax, using a given state as the root
+ */
 public class MinimaxThread extends Thread{
     private Optional<Integer> score;
     private final int maxDepth;
@@ -18,21 +19,41 @@ public class MinimaxThread extends Thread{
 
     private Thread thread;
 
+    /**
+     * @return optimal score from minimax tree
+     */
     public Optional<Integer> getScore(){return this.score;}
 
     public Thread getThread(){
         return this.thread;
     }
 
+    /**
+     * Hash Table containing the score (if seen previously) for a given board
+     */
     private Dictionary<Long, Optional<Integer>> table;
 
-    protected Pair<Boolean, Integer> minimax(AiState aiState, int depth, double alpha, double beta){
+    /**
+     * @param aiState
+     * @param depth
+     * @param alpha
+     * @param beta
+     * @return Pair: Boolean flag indicating if the move time limit was reached, Integer representing optimal score from minimax tree
+     */
+    private Pair<Boolean, Integer> minimax(AiState aiState, int depth, double alpha, double beta){
+        /**
+         * Returns score of current state if reached required depth or a terminatng game state
+         */
         if(depth == 0 || aiState.isTerminal()){
             return Pair.pair(false, aiState.getScore());
         }
         int minMaxEval = 1000;
         if(aiState.isMaximizing()) minMaxEval = -minMaxEval;
+
         for(Action action : aiState.getActions()){
+            /**
+             * Returns if time limit reached
+             */
             if(System.currentTimeMillis() - start >= (timeout_factor * limit)){
                 if(aiState.isMaximizing()){
                     if(action.getNextState().getScore() > minMaxEval) return Pair.pair(true, aiState.getScore());
@@ -41,10 +62,11 @@ public class MinimaxThread extends Thread{
                     if(action.getNextState().getScore() < minMaxEval) return Pair.pair(true, aiState.getScore());
                     else return Pair.pair(true, minMaxEval);
                 }
-
-
             }
 
+            /**
+             * Checks table to see if state already evaluated
+             */
             Optional<Integer> tableEntry;
             try{
                 tableEntry = table.get(action.getNextState().getUniqueKey());
@@ -54,15 +76,17 @@ public class MinimaxThread extends Thread{
 
             Pair<Boolean, Integer> evalPair;
 
-            if (tableEntry.isEmpty()) {
+            if ( tableEntry == null || tableEntry.isEmpty()) {
                 evalPair = minimax(action.getNextState(), depth - 1, alpha, beta);
-                table.put(action.getNextState().getUniqueKey(), Optional.of(evalPair.right()));
+                //table.put(action.getNextState().getUniqueKey(), Optional.of(evalPair.right()));
 
             } else {
-                System.out.println("TABLE");
+                //System.out.println("TABLE");
                 evalPair = Pair.pair(false, tableEntry.get());
             }
-
+            /**
+             * Gets state evaluation and prunes tree
+             */
             int eval = evalPair.right();
             if (aiState.isMaximizing()) {
                 if (eval > alpha) alpha = eval;
@@ -72,6 +96,11 @@ public class MinimaxThread extends Thread{
 
             if (beta <= alpha) {
                 //System.out.println("prune");
+                if(aiState.isMaximizing()){
+                    if(action.getNextState().getScore() > minMaxEval) minMaxEval = aiState.getScore();
+                }else{
+                    if(action.getNextState().getScore() < minMaxEval) minMaxEval = aiState.getScore();
+                }
                 break;
             }
 
@@ -89,7 +118,7 @@ public class MinimaxThread extends Thread{
     public void run(){
         synchronized (this){
             Pair<Boolean, Integer> pair = minimax(this.state, this.maxDepth, Double.NEGATIVE_INFINITY, Double.POSITIVE_INFINITY);
-            timeout = pair.left();
+            this.timeout = pair.left();
             score = Optional.of(pair.right());
         }
     }

@@ -7,9 +7,13 @@
     <list default="true" id="b0a2316d-adf9-441c-b252-ce4ca91e8ee7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../Report.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../Report.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cw-ai/src/main/java/uk/ac/bris/cs/scotlandyard/ui/ai/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cw-ai/src/main/java/uk/ac/bris/cs/scotlandyard/ui/ai/Action.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cw-ai/src/main/java/uk/ac/bris/cs/scotlandyard/ui/ai/ActionSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cw-ai/src/main/java/uk/ac/bris/cs/scotlandyard/ui/ai/ActionSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cw-ai/src/main/java/uk/ac/bris/cs/scotlandyard/ui/ai/AiState.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cw-ai/src/main/java/uk/ac/bris/cs/scotlandyard/ui/ai/AiState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cw-ai/src/main/java/uk/ac/bris/cs/scotlandyard/ui/ai/Minimax.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cw-ai/src/main/java/uk/ac/bris/cs/scotlandyard/ui/ai/MinimaxThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cw-ai/src/main/java/uk/ac/bris/cs/scotlandyard/ui/ai/MinimaxThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cw-ai/src/main/java/uk/ac/bris/cs/scotlandyard/ui/ai/MyAi.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cw-ai/src/main/java/uk/ac/bris/cs/scotlandyard/ui/ai/MyAi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cw-ai/src/main/java/uk/ac/bris/cs/scotlandyard/ui/ai/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cw-ai/src/main/java/uk/ac/bris/cs/scotlandyard/ui/ai/Search.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cw-ai/src/main/java/uk/ac/bris/cs/scotlandyard/ui/ai/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cw-ai/src/main/java/uk/ac/bris/cs/scotlandyard/ui/ai/State.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cw-ai/src/main/java/uk/ac/bris/cs/scotlandyard/ui/ai/Triple.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
