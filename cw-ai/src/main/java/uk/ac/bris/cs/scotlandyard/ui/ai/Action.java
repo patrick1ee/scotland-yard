@@ -1,31 +1,24 @@
 package uk.ac.bris.cs.scotlandyard.ui.ai;
 
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableSet;
-import org.glassfish.grizzly.utils.ArraySet;
-import uk.ac.bris.cs.scotlandyard.model.Board;
 import uk.ac.bris.cs.scotlandyard.model.Move;
-import uk.ac.bris.cs.scotlandyard.model.ScotlandYard;
-
-import java.util.*;
 
 public class Action implements Comparable<Action> {
     private Move move;
-    private State nextState;
+    private AiState nextAiState;
 
-    public int getScore() {return nextState.getScore();}
+    public int getScore() {return nextAiState.getScore();}
 
     @Override
     public int compareTo(Action that) {
-        return (this.nextState.compareTo(that.nextState));
+        return (this.nextAiState.compareTo(that.nextAiState));
     }
 
     public Move getMove(){
         return this.move;
     }
 
-    public State getNextState(){
-        return this.nextState;
+    public AiState getNextState(){
+        return this.nextAiState;
     }
 
     public int getDestination(){
@@ -42,10 +35,10 @@ public class Action implements Comparable<Action> {
         });
     }
 
-    public Action(State currentState, Move move){
+    public Action(AiState currentAiState, Move move){
         this.move = move;
-        if(move.commencedBy().isMrX()) nextState = new State(currentState.advance(move), ActionSet.getDestination(move));
-        else nextState = new State(currentState.advance(move), currentState.getAgentLocation());
+        if(move.commencedBy().isMrX()) nextAiState = new AiState(currentAiState.advance(move), this.getDestination());
+        else nextAiState = new AiState(currentAiState.advance(move), currentAiState.getAgentLocation());
     }
 
 }

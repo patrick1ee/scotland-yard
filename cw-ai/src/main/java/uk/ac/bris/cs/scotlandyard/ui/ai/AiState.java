@@ -1,7 +1,6 @@
 package uk.ac.bris.cs.scotlandyard.ui.ai;
 
 import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableSet;
 import uk.ac.bris.cs.scotlandyard.model.Board;
 import uk.ac.bris.cs.scotlandyard.model.Move;
 import uk.ac.bris.cs.scotlandyard.model.Piece;
@@ -12,7 +11,7 @@ import java.util.List;
 
 import static uk.ac.bris.cs.scotlandyard.ui.ai.Search.shortestDistances;
 
-public class State implements Comparable<State> {
+public  class AiState implements Comparable<AiState> {
     private Board.GameState gameState;
     private long key;
     private int score;
@@ -40,11 +39,11 @@ public class State implements Comparable<State> {
     public boolean isTerminal(){return this.terminal;}
 
     @Override
-    public int compareTo(State that) {
+    public int compareTo(AiState that) {
         return (this.getScore() - that.getScore());
     }
 
-    public State(Board board, int agentLocation){
+    public AiState(Board board, int agentLocation){
         this.gameState = (Board.GameState) board;
         this.availableMoves = gameState.getAvailableMoves().asList();
         this.agentLocation = agentLocation;

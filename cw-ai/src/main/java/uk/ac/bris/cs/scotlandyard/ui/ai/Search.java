@@ -26,26 +26,7 @@ public class Search {
         return key;
     }
 
-    static List<Integer> getDetectiveLocations(Board board){
-        List<Integer> detectiveLocations = new ArrayList<>();
-        for(Piece p : board.getPlayers()){
-            if(p.isDetective()){
-                detectiveLocations.add(board.getDetectiveLocation((Piece.Detective)p).get());
-            }
-        }
-        return detectiveLocations;
-    }
-
-    static double getAverageDistanceFromDetectives(Board board, int location, List<Integer> locations){
-        List<Integer> distances = shortestDistances(board.getSetup().graph, location, locations);
-        int tot = 0;
-        for(int d : distances){
-            tot += d;
-        }
-        return tot / distances.size();
-    }
-
-    /** A* algorithm for shortest distance between two points **/
+    /** A* algorithm for shortest distance between two points - no longer used**/
     static List<Integer> shortestPathFromSourceToDestination(
             ImmutableValueGraph<Integer, Integer> graph,
             Integer source,

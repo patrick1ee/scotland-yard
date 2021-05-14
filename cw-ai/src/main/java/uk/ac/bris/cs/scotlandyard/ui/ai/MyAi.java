@@ -6,13 +6,12 @@ import java.util.concurrent.TimeUnit;
 import javax.annotation.Nonnull;
 
 
-import com.google.common.collect.ImmutableList;
 import io.atlassian.fugue.Pair;
 import uk.ac.bris.cs.scotlandyard.model.*;
 
 public class MyAi implements Ai {
 
-	private static final int depth = 10;
+	private static final int depth = 5;
 	private static final double timeout_factor = 0.95;
     private static final double correction = 2;
     private static final double discount = 0.9;
@@ -85,33 +84,30 @@ public class MyAi implements Ai {
 
 	@Nonnull @Override public String name() { return "Name me!"; }
 
-	private Pair<Boolean, Integer> minimax(State state, int depth, double alpha, double beta, Pair<Long, Long> timeout){
-		if(depth == 0 || state.isTerminal()){
-			return Pair.pair(false, state.getScore());
+	private Pair<Boolean, Integer> minimax(AiState aiState, int depth, double alpha, double beta, Pair<Long, Long> timeout){
+		if(depth == 0 || aiState.isTerminal()){
+			return Pair.pair(false, aiState.getScore());
 		}
 		int minMaxEval = 1000;
-		if(state.isMaximizing()) minMaxEval = -minMaxEval;
-		for(Action action : state.getActions()){
+		if(aiState.isMaximizing()) minMaxEval = -minMaxEval;
+		for(Action action : aiState.getActions()){
 			//System.out.println(System.currentTimeMillis() - timeout.left());
 			if(System.currentTimeMillis() - timeout.left() >= (timeout_factor * timeout.right())){
-				System.out.println("T");
 				return Pair.pair(true, minMaxEval);
 			}
-			Optional<Integer> tableEntry = table.get(state.getUniqueKey());
-			int eval;
+			Optional<Integer> tableEntry = table.get(action.getNextState().getUniqueKey());
+			Pair<Boolean, Integer> evalPair;
 
-			if (tableEntry == null) {
-				Pair<Boolean, Integer> evalPair = minimax(action.getNextState(), depth - 1, alpha, beta, timeout);
-				if (evalPair.left()) return Pair.pair(true, evalPair.right());
-				else {
-					eval = evalPair.right();
-					table.put(state.getUniqueKey(), Optional.of(eval));
-				}
+			if (tableEntry == null || tableEntry.isEmpty()) {
+				evalPair = minimax(action.getNextState(), depth - 1, alpha, beta, timeout);
+				table.put(action.getNextState().getUniqueKey(), Optional.of(evalPair.right()));
 
 			} else {
-				eval = tableEntry.get();
+				evalPair = Pair.pair(false, tableEntry.get());
 			}
-			if (state.isMaximizing()) {
+
+			int eval = evalPair.right();
+			if (aiState.isMaximizing()) {
 				if (eval >= alpha) alpha = eval;
 			} else {
 				if (eval <= beta) beta = eval;
@@ -122,11 +118,13 @@ public class MyAi implements Ai {
 				break;
 			}
 
-			if (state.isMaximizing()) {
+			if (aiState.isMaximizing()) {
 				if (eval > minMaxEval) minMaxEval = eval;
 			} else {
 				if (eval < minMaxEval) minMaxEval = eval;
 			}
+
+			if (evalPair.left()) return Pair.pair(true, minMaxEval);
 		}
 		return Pair.pair(false, minMaxEval);
 	}
@@ -142,7 +140,9 @@ public class MyAi implements Ai {
 		long start = System.currentTimeMillis();
 		int MrXLocation = board.getAvailableMoves().iterator().next().source();
 
-		State currentState = new State(board, MrXLocation);
+		AiState currentAiState = new AiState(board, MrXLocation);
+
+
 		/*double max = Double.NEGATIVE_INFINITY;
 		Move maxMove = null;
 		System.out.println(timeoutPair);
@@ -170,7 +170,7 @@ public class MyAi implements Ai {
 			}
 		}
 		System.out.println(maxMove);*/
-		double max = Double.NEGATIVE_INFINITY;
+		/*double max = Double.NEGATIVE_INFINITY;
 		Move maxMove = null;
 		for(Action action : currentState.getActions()){
 			if(System.currentTimeMillis() - start >= (timeout_factor * timeoutPair.left() * 1000)) break;
@@ -184,7 +184,29 @@ public class MyAi implements Ai {
 			}
 			if(scoreTime.left()) break;
 		}
-		System.out.println(max + ", " + maxMove);
+		System.out.println(max + ", " + maxMove);*/
+
+		List<Pair<MinimaxThread, Action>> threads = new ArrayList<>();
+		ActionSet actions = currentAiState.getActions();
+		for(Action action : actions){
+			MinimaxThread m = new MinimaxThread(action.getNextState(), depth, Pair.pair(start, timeoutPair.left() * 1000));
+			m.start();
+			threads.add(new Pair(m, action));
+		}
+
+		while(threads.stream().anyMatch(t -> t.left().getThread().isAlive())){}
+		System.out.println("Threading complete");
+
+		double max = Double.NEGATIVE_INFINITY;
+		Move maxMove = null;
+		for(Pair<MinimaxThread, Action> t : threads){
+			System.out.println(t.left().getScore().get());
+			if(t.left().getScore().get() > max){
+				max = t.left().getScore().get();
+				maxMove = t.right().getMove();
+			}
+		}
+
 		return maxMove;
 	}
 

@@ -1,7 +1,6 @@
 package uk.ac.bris.cs.scotlandyard.ui.ai;
 
 import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableSet;
 import uk.ac.bris.cs.scotlandyard.model.Move;
 import uk.ac.bris.cs.scotlandyard.model.ScotlandYard;
 
@@ -126,11 +125,11 @@ public class ActionSet implements Iterable<Action>{
         };
     }
 
-    public ActionSet(State state, ImmutableList<Move> moves, boolean maximizing){
+    public ActionSet(AiState aiState, ImmutableList<Move> moves, boolean maximizing){
         moves = filterMoves(moves);
         Action[] actions = new Action[moves.size()];
         for(int i = 0; i < moves.size(); i++){
-            actions[i] = new Action(state, moves.get(i));
+            actions[i] = new Action(aiState, moves.get(i));
         }
         this.actions = mergeSort(maximizing, actions);
     }
